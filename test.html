@@ -1,0 +1,896 @@
+        <!-- CANVAS.HTML 
+
+        <html>
+
+        <head>
+          <style>
+            canvas {
+              border: 3px solid purple;
+            }
+        
+            body {
+              background-color: lightgreen;
+              color: lightpinkred;
+            }
+          </style>
+        </head>
+        
+        <body>
+          <center>
+            <header>
+              <h1> Canvas Example
+              </h1>
+              <p> draw on canvas by clicking and dragging the mouse
+              </p>
+            </header>
+        
+            <article>
+              <h2> Canvas
+              </h2>
+        
+              <canvas id="myCanvas" width="500" height="300" onmousedown="startDrawing(event)" onmousemove="drawLine(event)"
+                onmouseup="stopDrawing(event)">
+        
+              </canvas>
+            </article>
+        
+            <script>
+              var canvas = document.getElementById("myCanvas");
+              var ctx = canvas.getContext("2d");
+              var isDrawing = false;
+        
+              function startDrawing(event) {
+                isDrawing = true;
+                var x = event.clientX - canvas.offsetLeft;
+                var y = event.clientY - canvas.offsetTop;
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+              }
+        
+              function drawLine(event) {
+                if (isDrawing) {
+                  var x = event.clientX - canvas.offsetLeft;
+                  var y = event.clientY - canvas.offsetTop;
+                  ctx.lineTo(x, y);
+                  ctx.stroke();
+        
+                }
+              }
+        
+              function stopDrawing(event) {
+                isDrawing = false;
+              }
+        
+            </script>
+          </center>
+        </body>
+        
+        </html> -->
+
+
+
+
+
+
+
+
+
+<!-- 
+
+       LABSHEET  RESTAURENT
+       
+
+       <!DOCTYPE html>
+       <html>
+       
+       <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width">
+         <title>restaurant</title>
+         <link href="style.css" rel="stylesheet" type="text/css" />
+       
+           <style>
+               html {
+         height: 100%;
+         width: 100%;
+       }
+       body{
+         font-family:Arial,sans-serif;
+         margin:0;
+         padding:0;
+       }
+       header {
+         background-color:#333;
+         color:white;
+         padding:20px;
+       }
+       nav a {
+         color:white;
+         text-decoration:none;
+         margin-right:20px;
+       }
+       nav a:hover {
+         color:#ffcc00;
+       }
+       main{
+         background-color: #eee;
+         padding:50px;
+         text-align:center;
+       }
+       main h2{
+         color:#333;
+         font-size:36px;
+         margin-bottom:50px;
+       }
+       main p {
+         color:#666;
+         font-size:18px;
+         line-height:1.5;
+         margin-bottom:50px;
+       }
+       main img {
+         max-width: 100%;
+         height:auto;
+         margin-top:20px;
+         box-shadow:0px 0px 10px #333;
+       }
+       section {
+         display:flex;
+         flex-wrap:wrap;
+         justify-content:space-around;
+         background-color:#fff;
+         padding:50px;
+       }
+       .menu-item{
+         flex-basis:30%;
+         margin-bottom:50px;
+         box-shadow:0px 0px 10px #999;
+         padding:20px;
+         text-align:center;
+       }
+       .menu-item img {
+         max-width:100%;
+         height:auto;
+         margin-bottom:20px;
+       }
+       .menu-item h3 {
+         color:#333;
+         height:24px;
+         margin-bottom:10px;
+       }
+       .menu-item p {
+         color:#666;
+         font-size:16px;
+         line-height:1.5;
+       }
+       footer {
+         background-color: #333;
+         color:white;
+         padding:20px;
+         text-align:center;
+       }
+       footer p {
+         font-size:14px;
+         margin:0;
+       }
+       header {
+         background:linear-gradient(to bottom,#333 0%,#666 100%);
+       }
+       nav a:hover{
+         background:linear-gradient(to bottom,#ffcc00 0%,#ff9900 100%);
+       }
+       section {
+         background:radial-gradient(circle,#fff 0%,#eee 100%);
+       }
+       .menu-item:hover {
+         background:linear-gradient(to bottom,#eee 0% ,#fff 100%);
+         transform:translateY(-5px);
+       }
+       footer {
+         background:linear-gradient(to bottom, #666 0%,#333 100%);
+       }
+       
+       
+           </style>
+       
+       
+       </head>
+       
+       <body>
+         <header>
+         <center>
+         <h1> Welcome to My Restaurant</h1> </center>
+         <nav>
+           <a href="#main">Home</a>
+           <a href="#menu">Menu</a>
+           <a href="#con"> Contact Us </a>
+         </nav>
+         </header>
+         <main>
+           <h2 id="main">About Us</h2>
+           <p> My Restaurant is a new restaurant opening soon in your city. Our mission is to provide good service and good food to the customer </p>
+           <img src="resimg.jpg" alt="Restaurant_image" width="600" height="400">
+         </main>
+         <section>
+           <div class="menu-item">
+             <img src="c1img.jpg" alt="Menu Item 1" width="200" height="220">
+             <h3 id="menu"> Ultimate Savings Bucket </h3>
+             <p> Crunchy chicken topped with cheese,spicy sauce,veggies</p>
+           </div>
+           <div class="menu-item">
+             <img src="c2img.jpg" alt="Menu Item 2"  width="200" height="250">
+             <h3> Family Fest</h3>
+             <p> Flat Rs.115 off on combo of 2pc Hot and crispy</p>
+           </div>
+            <div class="menu-item">
+             <img src="c3img.jpg" alt="Menu Item 3"  width="200" height="200">
+             <h3>Big 8</h3>
+             <p> Family Deal of 3 chicken zingers,med popcorn</p>
+           </div>
+           
+           
+         </section>
+         <footer id="con">
+           <p> &copy; 2023 My Restaurant</p>
+         </footer>
+         
+         <script src="script.js"></script>
+       
+         
+         <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+       </body>
+       
+       </html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+       LABSHEET fiboonacci
+
+
+       <!DOCTYPE html>
+       <html>
+       
+       <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width">
+         <title>labsheet7</title>
+         <link href="style.css" rel="stylesheet" type="text/css" />
+       </head>
+       
+       <body>
+         <script type="text/javascript">
+           var fib1 = 0, fib2 = 1, fib = 0;
+           var num = prompt("Enter a number:\n", "");
+           if (num != null && num > 0) {
+             document.write("<h1>The first " + num + " numbers in the fibanocci series </h1>");
+             if (num == 1)
+               document.write("<h2>" + fib1 + "</h2>");
+             else {
+               document.write("<h2>" + fib1 + "</h2>");
+               document.write("<h2>" + fib2 + "</h2>");
+             }
+             for (i = 3; i <= num; i++) {
+               fib = fib1 + fib2;
+               document.write("<h2>" + fib + "</h2>");
+               fib1 = fib2;
+               fib2 = fib;
+             }
+           }
+           else {
+             alert("invalid input");
+           }
+         </script>
+       
+       
+       
+       
+       </body>
+       
+       </html> -->
+
+
+
+
+
+
+
+
+
+<!-- 
+
+       LABSHEET SQUARES 
+
+
+       <!DOCTYPE html>
+       <html>
+       
+       <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width">
+         <title>square</title>
+         <link href="style.css" rel="stylesheet" type="text/css" />
+       </head>
+       
+       <body>
+       
+         <script type="text/javascript">
+           var num = prompt("enter a number :\n", "");
+           var msgstr;
+           if (num > 0 && num != null) {
+             msgstr = "Number and its Squares are \n";
+             for (i = 1; i <= num; i++) {
+               msgstr = msgstr + i + "^2=" + i * i + "\n";
+             }
+             alert(msgstr);
+           }
+         </script>
+       
+       
+       
+       </body>
+       
+       </html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--        
+     LABSHEET 3 EMPLOYEE BASIC DETAILS 
+     
+
+     <!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>replit</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+      </head>
+      
+      <body bgcolor="lightblue"> 
+        <center><H1> ****** Employee Basic Details ******</H1></center><hr>
+      
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required /><br><br>
+      
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required /><br><br>
+      
+            <div id="age-range">
+              <label for="age">Age:</label>
+              <input type="range" id="age" name="age" min="18" max="100" />   <br><br>
+              <span class="age-value">  </span>
+            </div>
+      
+            <div id="email-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required /><br><br>
+            </div>
+      
+            <div id="website-group">
+              <label for="website">Website:</label>
+              <input type="url" id="website" name="website" /><br><br>
+            </div>
+      
+            <button type="submit">Sign Up</button>
+          </form>
+    
+          <script>
+    
+             // conditional logic to show or hide fields based on user input
+          const ageRange = document.getElementById('age-range');
+          const emailGroup = document.getElementById('email-group');
+          const websiteGroup = document.getElementById('website-group');
+    
+          ageRange.style.display = 'none';
+          emailGroup.style.display = 'none';
+          websiteGroup.style.display = 'none';
+    
+          document.getElementById('dob').addEventListener('change', function () {
+            const age = calculateAge(this.value);
+            if (age < 18) {
+              ageRange.style.display = 'none';
+              emailGroup.style.display = 'none';
+              websiteGroup.style.display = 'none';
+            } else if (age >= 18 && age <= 25) {
+              ageRange.style.display = 'block';
+              emailGroup.style.display = 'block';
+              websiteGroup.style.display = 'none';
+            } else {
+              ageRange.style.display = 'block';
+              emailGroup.style.display = 'block';
+              websiteGroup.style.display = 'block';
+            }
+            // display age
+            
+            ageRange.querySelector('.age-value').innerHTML = age;
+            ageRange.querySelector('input').value = age;
+          });
+    
+          // inline validation
+          document.querySelectorAll('input[required]').forEach((input) => {
+            input.addEventListener('invalid', function () {
+              this.setCustomValidity('Please fill out this field.');
+            });
+            input.addEventListener('input', function () {
+              this.setCustomValidity('');
+            });
+          });
+    
+          // helper function to calculate age from date of birth
+          function calculateAge(birthday) {
+            const today = new Date();
+            const birthDate = new Date(birthday);
+            let age = today.getFullYear() - birthDate.getFullYear();
+            return age;
+          }
+    
+         
+          </script>
+        
+        <script src="script.js"></script>
+      </body></html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+<!-- 
+
+      LABSHEET 1 PRESIDENCY Website
+
+
+
+      INDEX.HTML 
+
+      <frameset rows="25%,*">
+        <frame src="top.html" name="top">
+          <frame src="about.html" noresize name="bottom">
+      </frameset>
+
+
+      ABOUT.HTML 
+      <html> <head>  <style>
+        body {
+          background-color: rgb(255,255,0);
+          text-align: center;
+        }
+      </style></head>
+    <body>
+      <h1> Welcome to Presidency University</h1>
+      <p><b> Bangalore</b></p>
+      <img src="pu1.jpg" width="60%" height="70%">
+    </body></html>
+
+
+    ACADEMICS.HTML 
+
+    <html>
+<body bgcolor="lightblue">
+    <center>
+    <h1 >   WELCOME<br> TO <br>PRESIDENCY UNIVERSITY
+</h1>
+    <h2  style="text-align:justify">
+As convenience for those who wish to visit our campus, the University has arranged for transportation facility. Click on the link below to view our transportation details.
+</h2>
+</center>
+</body></html>
+
+
+    ADMISSION.HTML 
+
+    <html>
+        <head>
+            <link rel="stylesheet" href="mystyle.css">
+            <style>
+                body
+                {
+                    background-color: rgba(189, 189, 188, 0.79);
+                }
+                .static
+                {
+                position:sticky;
+                top:0;
+                right:0;
+                display: inline;
+                float: right;
+                font-size:25px;    
+                border-radius: 15px;
+                padding:10px;
+                background-color: aliceblue;
+                box-shadow: 0 0 25px black;
+                }
+                li
+                {
+                    list-style: none;
+                    margin:8px 5px;
+                }
+                a
+                {
+                    text-decoration: none;
+                    color:rgb(50, 53, 51);
+                }
+                li:hover
+                {
+                    border:2px solid black;
+                    display:inline-block;
+                    padding:8px;
+                    color: azure;
+                    border-radius: 20px;
+                    background-color:rgb(37, 38, 43);
+                }
+                h1
+                {
+                    /* border:2px solid black; */
+                    display: inline-block;
+                    padding:5px;
+                    color:darkslateblue;
+                    text-shadow: 2px 1px 2px rgb(120, 127, 131);
+                }
+        
+            </style>
+        </head>
+        <body>
+            <div class="static">
+                <a href="register.html"> For Admission Click Here</a></div>
+        <h1 >Admissions Open </h1>
+        <ul>
+          <a href="register.html"><li>School of Engineering</li></a>
+          <a href="register.html"><li>School of Law</li></a>
+          <a href="register.html"><li>School of Management</li></a>
+         <a href="register.html"><li>School of Commerce</li></a>
+         <a href="register.html"><li>School of Design</li></a>
+        </ul>
+        </body>
+        </html>
+        
+
+        
+        FACILITIES.HTML 
+
+        <html>
+
+<head>
+  <title>Facilities</title>
+  <style>
+    body {
+      background-color: rgb(211, 215, 211);
+    }
+
+    img {
+      float: right;
+      height: 200px;
+      width: 350px;
+      border-radius: 20px;
+      margin: 110px 19px;
+    }
+
+    p {
+
+      margin: 29px 23px;
+      font-size: 24px;
+      width: 750px;
+      text-align: justify;
+    }
+
+    h1 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 30px;
+      margin: 25px 203px;
+      border: 2px solid black;
+      display: inline-block;
+      padding: 5px;
+      border-radius: 15px;
+      background-color: lightgray;
+    }
+
+    #a2 {
+      float: left;
+      margin: 160px 10px;
+    }
+
+    #P2 {
+      /* border:2px solid black; */
+      margin: 10px 370px;
+      width: 650px;
+    }
+
+    #h2 {
+      margin: 10px 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="Library.jpg" alt="Library" class="image" id="a1">
+    <h1>Library</h1>
+    <p>
+      The Presidency University reference and lending library is well-stocked with a vast collection of books, reports,
+      journals and periodicals. The library also provides access to the best of business and management-related digital
+      resources through its subscription to various databases consisting of scholarly and industry-relevant content.
+      Students utilize these services for their classroom-related work and for further research into their areas of
+      interest.
+    </p>
+
+    <img src="classroom.jpg" alt="Library" class="image" id="a2">
+    <h1 #id="H2">Classrooms</h1>
+    <p id="P2">
+      The Presidency University reference and lending library is well-stocked with a vast collection of books, reports,
+      journals and periodicals. The library also provides access to the best of business and management-related digital
+      resources through its subscription to various databases consisting of scholarly and industry-relevant content.
+      Students utilize these services for their classroom-related work and for further research into their areas of
+      interest.
+    </p>
+    <img src="Library.jpg" alt="Library" class="image" id="a1">
+      <h1>Library</h1>
+      <p>
+        The Presidency University reference and lending library is well-stocked with a vast collection of books,
+        reports, journals and periodicals. The library also provides access to the best of business and
+        management-related digital resources through its subscription to various databases consisting of scholarly and
+        industry-relevant content. Students utilize these services for their classroom-related work and for further
+        research into their areas of interest.
+      </p>
+
+      <img src="classroom.jpg" alt="Library" class="image" id="a2">
+        <h1 #id="H2">Classrooms</h1>
+        <p id="P2">
+          The Presidency University reference and lending library is well-stocked with a vast collection of books,
+          reports, journals and periodicals. The library also provides access to the best of business and
+          management-related digital resources through its subscription to various databases consisting of scholarly and
+          industry-relevant content. Students utilize these services for their classroom-related work and for further
+          research into their areas of interest.
+        </p>
+</body>
+
+</html>
+
+
+
+LOGIN.HTML 
+
+<html> <head>
+    <title>Login_Page</title>
+    </head>
+    <body bgcolor="gray"><center>
+                <h1 >  Login Page       </h1>
+    <h3>
+    Name:     <input type="text" placeholder="Enter Name"><br><br>
+    Password: <input type="text" placeholder="Password"><br><br>
+              <input type="button" value="Submit">
+              <input type="button" value="Register">
+    </h3></center></body></html>
+
+    
+    REGISTER.HTML 
+
+    <html><head>    <title>Login_Page</title></head>
+<body bgcolor="cyan">
+<center>  
+          <h1 >              Registration Page             </h1>
+<h3>
+First Name:   <input type="text"><br><br>
+Last Name:    <input type="text"><br><br>
+Email:        <input type="text"><br><br>
+Mobile:       <input type="number"><br><br>
+Gender:       <input type="radio">Male
+              <input type="radio">Female<br><br>
+Dote of Birth:<input type="date"><br><br>
+Address:      <input type="text" placeholder="Address"><br><br>
+</h3></center></body></html>
+
+
+TOP.HTML 
+
+<html>
+    <head>
+        <link rel="stylesheet" href="mystyle.css">
+        <style>
+            *    {
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #151925;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+    a
+    {
+        position: relative;
+        display: inline-block;
+        padding:25px 15px;
+        margin:20px 10px;
+        color: #03e9f4;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.9s;
+        /* letter-spacing: 2px; */
+        overflow: hidden;
+        margin-right:20px;
+    
+    }
+    a:hover
+    {
+        background: #03e9f4;
+        color: #050801;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+        -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    
+    } 
+    a:nth-child(1)
+    {
+        filter:hue-rotate(270deg);
+    }
+    a:nth-child(2)
+    {
+        filter:hue-rotate(110deg);
+    }
+    a:nth-child(3)
+    {
+        filter:hue-rotate(200deg);
+    }
+    a:nth-child(4)
+    {
+        filter:hue-rotate(270deg);
+    }
+    a:nth-child(5)
+    {
+        filter:hue-rotate(110deg);
+    }
+    a:nth-child(6)
+    {
+        filter:hue-rotate(186deg);
+    }
+    a span
+    {
+        position: absolute;
+        display:block;
+    }
+    a span:nth-child(1)
+    {
+        top:0;
+        left:0;
+        width:100%;
+        height:2px;
+        background: linear-gradient(90deg, transparent,#03e9f4);
+        animation: animate1 1s linear infinite;
+    }
+    @keyframes animate1 
+    {
+        0%{left:-100%;}
+        50%,100%{left:100%;}
+    }
+    a span:nth-child(2)
+    {
+        top:-100%;
+        right:0;
+        width:2px;
+        height:100%;
+        background: linear-gradient(180deg, transparent,#03e9f4);
+        animation: animate2 1s linear infinite;
+        animation-delay: 0.25s;
+    }
+    @keyframes animate2 
+    {
+        0%{top:-100%}
+        50%, 100%{top:100%;}
+    }
+    a span:nth-child(3)
+    {
+        bottom:0;
+        right:0;
+        width:100%;
+        height:2px;
+        background: linear-gradient(270deg, transparent,#03e9f4);
+        animation: animate3 1s linear infinite;
+        animation-delay: 0.5s;
+    }
+    @keyframes animate3 
+    {
+        0%{right:-100%}
+        50%, 100%{right:100%;}
+    }
+    a span:nth-child(4)
+    {
+        bottom:-100%;
+        left:0;
+        width:2px;
+        height:100%;
+        background: linear-gradient(360deg, transparent,#03e9f4);
+        animation: animate4 1s linear infinite;
+        animation-delay: 0.75s;
+        /* border-radius:20px; */
+    }
+    @keyframes animate4 
+    {
+        0%{bottom:-100%}
+        50%, 100%{bottom:100%;}
+    }
+    
+    
+    </style>
+    </head>
+    <body bgcolor="black">
+        <img src="pu1.jpg" alt="PU Logo" style="background-color:white; padding:10px;border-radius: 10px; margin-top: 5px;margin-bottom: 5px; height:100px; border:3px solid lightgrey">
+
+        <a href="about.html" target="bottom">
+            Home<span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <a href="academics.html" target="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Academic
+        </a>
+        <a href="admission.html" target="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Admissions
+        </a>
+        <a href="facilities.html" target="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Facilities
+        </a>
+        <a href="login.html" target="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Login
+        </a>
+        <a href="register.html" target="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Register
+        </a>
+    </body>
+</html> -->
