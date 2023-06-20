@@ -1,0 +1,1457 @@
+								LAB SHEET – 2
+
+
+1. WAP to calculate area and volume of a room using class and 
+object concept
+Code
+
+
+#include <iostream.h>
+#include <conio.h>
+class Room 
+{
+ public:
+ double length;
+ double breadth;
+ double height;
+ double calculateArea() 
+ {
+ return length * breadth;
+ }
+ double calculateVolume() 
+{
+ return length * breadth * height;
+ }
+};
+void main() {
+ Room room1;
+ room1.length = 42.5;
+ room1.breadth = 30.8;
+ room1.height = 19.2;
+ cout << "Area of Room = “ << room1.calculateArea() << endl;
+ cout << "Volume of Room = “ << room1.calculateVolume() << endl;
+ getch();
+}
+Output
+Area of Room = 1309
+Volume of Room = 25132.8
+
+
+2. Update the 1 program to calculate area and volume of a room 
+using class and object concept where length, breadth and 
+height should be entered by user at run time.
+
+3. WAP to add two integers using class and object concept (create 
+2 objects for this class).
+PROGRAMMING IN C++ - CSE2036
+2
+Code
+
+
+#include <iostream.h>
+#include<conio.h>
+class Addition
+{
+ Public:
+ int num1, num2, result;
+ void read() 
+{
+ cout << "Enter Number 1 :";
+ cin >> num1;
+ cout << "Enter Number 2 :";
+ cin >> num2;
+ }
+ void sum() {
+ result = num1 + num2;
+ }
+ void print() {
+ cout << "Result :" << num1 << " + " << num1 << " = " << result << endl;
+ }
+};
+void main() 
+{
+ Addition obj1, obj2;
+ cout << "Simple Class Addition : Add Two Integers In C++\n";
+ cout << "\nAdditionClass : obj1 Usage" << endl;
+ obj1.read();
+ obj1.sum();
+ obj1.print();
+ cout << "\nAdditionClass : obj2 Usage" << endl;
+ obj2.read();
+ obj2.sum();
+ obj2.print();
+ getch();
+}
+Output
+PROGRAMMING IN C++ - CSE2036
+3
+Simple Class Addition: Add Two Integers In C++
+AdditionClass : obj1 Usage
+Enter Number 1 :100
+Enter Number 2 :200
+Result :100 + 100 = 300
+AdditionClass : obj2 Usage
+Enter Number 1 :700
+Enter Number 2 :900
+Result :700 + 700 = 1600
+
+
+4. WAP to read Student Information like name, regno and three
+subjects marks from the user also calculate and print sum and 
+avg of the marks along with above information. (make data 
+members - private)
+Code
+
+#include <iostream.h>
+#include<conio.h>
+ class StudentClass 
+ {
+Private:
+ char name[20];
+ int regNo, sub1, sub2, sub3;
+ float total, avg;
+ void read() {
+ cout << "Enter Name :";
+ cin >> name;
+ cout << "Enter Registration Number :";
+ cin >> regNo;
+ cout << "Enter Marks for Subject 1,2 and 3 :";
+ cin >> sub1 >> sub2>> sub3;
+ }
+ void sum () {
+ total = sub1 + sub2 + sub3;
+ avg = total / 3;
+ }
+ void print () {
+ cout << "Name :" << name << endl;
+ cout << "Registration Number :" << regNo << endl;
+ cout << "Marks :" << sub1 << " , " << sub2 << " , " << sub3 << endl;
+ cout << "Total :" << total << endl;
+ cout << "Average :" << avg << endl;
+ }
+PROGRAMMING IN C++ - CSE2036
+4
+};
+void main() {
+ StudentClass stu1;
+ cout << "\nStudentClass : Student 1" << endl;
+ stu1.read();
+ stu1.sum();
+ stu1.print();
+ getch();
+}
+Output
+StudentClass : Student 1
+Enter Name :Mohan
+Enter Registration Number :1001
+Enter Marks for Subject 1,2 and 3 : 90 80 65
+Name :Mohan
+Registration Number :1001
+Marks :90 , 80 , 65
+Total :235
+Average :78.3333
+
+
+5 WAP to overload the function Volume by computing volume of a 
+cylinder, cube and sphere using concept of class and SRO.
+Code
+
+
+#include<iostream>
+#include<conio.h>
+Class calculate
+{
+ Public:
+ int r,h,a;
+ float r1;
+ void input()
+{
+ cout<<"Enter radius and height of a cylinder:";
+ cin>>r>>h;
+ cout<<"Enter side of cube:";
+ cin>>a;
+ cout<<"Enter radius of sphere: ";
+ cin>>r1;
+}
+ float vol(int,int);
+ float vol(float);
+ int vol(int);
+PROGRAMMING IN C++ - CSE2036
+5
+}; 
+Float calculate :: vol(int r,int h)
+ {
+ return(3.14*r*r*h);
+ }
+ Float calculate :: vol(float r1)
+ {
+ return((4*3.14*r1*r1*r1)/3);
+ }
+ int calculate :: vol(int a)
+ {
+ return(a*a*a);
+ }
+void main()
+ {
+ Calculate ob1;
+ Ob1.input();
+ cout<<"Volume of cylinder is "<<ob1.vol(r,h);
+ cout<<"\nVolume of cube is "<<ob1.vol(a);
+ cout<<"\nVolume of sphere is "<<ob1.vol(r1);
+ getch() ;
+ }
+ 
+
+6 WAP to input rollnumber and marks of at least 3 subjects (use 
+array within class) and display the total marks of the student.
+
+
+#include<iostream>
+#include<conio.h>
+const int size=5;
+class student
+{
+ int roll_no;
+ int marks[size];
+ public:
+ void getdata ();
+ void tot_marks ();
+} ;
+ void student :: getdata () 
+{
+ cout<<"\nEnter roll no: ";
+ cin>>roll_no;
+ for(int i=0; i<size; i++) {
+ cout<<"Enter marks in subject"<<(i+1)<<": ";
+ cin>>marks[i] ;
+}
+ void student :: tot_marks() 
+PROGRAMMING IN C++ - CSE2036
+6
+{
+ int total=0;
+ for(int i=0; i<size; i++)
+ total+ = marks[i];
+ cout<<"\n\nTotal marks "<<total;
+}
+ void main() {
+ student stu;
+ stu.getdata() ;
+ stu.tot_marks() ;
+ getch();
+}
+
+7 WAP to input of name and marks of 5 students by creating an 
+array of the objects of students.
+
+
+#include <iostream.h>
+#include <conio.h>
+#include <string.h>
+class Student
+{
+string name;
+int marks;
+public:
+void getName()
+{
+getline( cin, name );
+}
+void getMarks()
+{
+cin >> marks;
+}
+void displayInfo()
+{
+cout << "Name : " << name << endl;
+cout << "Marks : " << marks << endl;
+}
+};
+int main()
+{
+Student st[5];
+for( int i=0; i<5; i++ )
+{
+cout << "Student " << i + 1 << endl;
+cout << "Enter name" << endl;
+st[i].getName();
+PROGRAMMING IN C++ - CSE2036
+7
+cout << "Enter marks" << endl;
+st[i].getMarks();
+}
+for( int i=0; i<5; i++ )
+{
+cout << "Student " << i + 1 << endl;
+st[i].displayInfo();
+}
+return 0;
+}
+
+
+8 WAP to input 3 employee details like name, position, age and
+salary by creating array of object
+
+#include<iostream>
+#include<conio.h>
+Class employee
+{
+Private:
+Char name[20],post[10];
+Int age;
+Float salary;
+Public:
+Void input();
+Void display();
+};
+Void employee :: input()
+{
+Cout<<”Enter name”<<endl;
+Cin>>name;
+Cout<<”Enter age”<<endl;
+Cin>>age;
+Cout<<”Enter Designation”<<endl;
+Cin>>post;
+Cout<<”Enter salary”<<endl;
+Cin>>salary;
+}
+Void employee :: display()
+{
+Cout<<”Employee name = ”<<name<<endl;
+Cout<<”Age = ”<<age<<endl;
+Cout<<” Designation = ”<<post<<endl;
+Cout<<”Salary = ”<<salary<< endl;
+}
+PROGRAMMING IN C++ - CSE2036
+8
+Void main()
+{
+Int i;
+employee e[3];
+for(i=1;i<=3;i++)
+{
+ Cout<<”Get”<<i<<”Employee Details”<<endl;
+ e[i].input();
+}
+for(i=1;i<=3;i++)
+{
+Cout<<”Employee”<<i<<endl;
+ emp[i].display();
+}
+getch();
+}
+
+
+9 Write a program to swap values of two variables using pointers.
+
+
+#include <iostream.h>
+#include <conio.h>
+class swapping
+{
+ public:
+void swap(int *num1, int *num2)
+{
+ int temp;
+ temp = *num1;
+ *num1 = *num2;
+ *num2 = temp;
+}
+};
+void main()
+{
+ int num1, num2;
+ swapping s;
+ cout << "\nEnter the first number : ";
+ cin >> num1;
+ cout << "\nEnter the Second number : ";
+ cin >> num2;
+ s. swap(&num1, &num2);
+ cout << "\nFirst number : " << num1;
+ cout << "\nSecond number: " << num2;
+ getch();
+}
+
+								LAB SHEET – 3
+
+
+1. Array of Objects – Declare and Initialize Separately
+
+#include <iostream>
+using namespace std;
+class Student {
+ public:
+ string name;
+ int rollno;
+ Student() {}
+ Student(string x, int y) {
+ name = x;
+ rollno = y;
+ }
+ void printDetails() {
+ cout << rollno << " - " << name << endl;
+ }
+};
+int main() {
+ //declare array with specific size
+ Student students[5];
+ 
+ //assign objects
+ students[0] = Student("Ram", 5);
+ students[1] = Student("Alex", 1);
+ students[2] = Student("Lesha", 4);
+ students[3] = Student("Emily", 3);
+ students[4] = Student("Anita", 2);
+ for(int i=0; i < 5; i++) {
+ students[i].printDetails();
+ }
+}
+
+2. Array of Objects – Declare and Initialize in a Single Line
+
+#include <iostream>
+using namespace std;
+class Student {
+ public:
+ string name;
+ int rollno;
+ Student() {}
+ Student(string x, int y) {
+ name = x;
+ rollno = y;
+ }
+ void printDetails() {
+ cout << rollno << " - " << name << endl;
+ }
+};
+int main() {
+ //declare array with specific size
+ Student students[] = {Student("Ram", 5), Student("Lesha", 4), 
+Student("Anita", 2)};
+ 
+ for(int i=0; i < 3; i++) {
+ students[i].printDetails();
+ }
+}
+
+3. Initialize Array of objects with parameterized constructors in C++
+
+#include <iostream>
+using namespace std;
+class Test {
+ // private variables.
+private:
+ int x, y;
+public:
+ // parameterized constructor
+ Test(int cx, int cy)
+ {
+ x = cx;
+ y = cy;
+ }
+ // method to add two numbers
+ void add() { cout << x + y << endl; }
+};
+int main()
+{
+ // Initializing 3 array Objects with function calls of
+ // parameterized constructor as elements of that array
+ Test obj[] = { Test(1, 1), Test(2, 2), Test(3, 3) };
+ // using add method for each of three elements.
+ for (int i = 0; i < 3; i++) {
+ obj[i].add();
+ }
+ return 0;
+}
+
+4. Constructor Overloading
+
+#include <iostream>
+using namespace std;
+class Room {
+ private:
+ double length;
+ double breadth;
+ public:
+ Room() {
+ length = 6.9;
+ breadth = 4.2;
+ }
+ Room(double l, double b) {
+ length = l;
+ breadth = b;
+ }
+ Room(double len) {
+ length = len;
+ breadth = 7.2;
+ }
+ double calculateArea() {
+ return length * breadth;
+ }
+};
+int main() {
+ Room room1, room2(8.2, 6.6), room3(8.2);
+ cout << "When no argument is passed: " << endl;
+ cout << "Area of room = " << room1.calculateArea() << endl;
+ cout << "\nWhen (8.2, 6.6) is passed." << endl;
+ cout << "Area of room = " << room2.calculateArea() << endl;
+ cout << "\nWhen breadth is fixed to 7.2 and (8.2) is passed:" << 
+endl;
+ cout << "Area of room = " << room3.calculateArea() << endl;
+ return 0;
+}
+
+
+5. Copy Constructor
+
+
+#include<iostream>
+using namespace std;
+class Employee {
+ private:
+ int salary, experience; 
+ public:
+ Employee(int x1, int y1) { 
+ salary = x1;
+ experience = y1;
+ }
+ Employee(Employee &new_employee) {
+ salary = new_employee.salary;
+ experience = new_employee.experience;
+ }
+ void display() {
+ cout << "Salary: " << salary << endl;
+ cout << "Years of experience: " << experience << endl;
+ }
+};
+ int main() {
+ Employee employee1(34000, 2); 
+ Employee employee2 = employee1; 
+ cout << "Employee1 using parameterized constructor : \n";
+ employee1.display();
+ cout << "Employee2 using copy constructor : \n";
+ employee2.display();
+ return 0;
+}
+
+
+6. Program to take object of one class as data member of other class.
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+class Marks {
+private:
+ int rno;
+ float perc;
+public:
+ Marks()
+ {
+ rno = 0;
+ perc = 0.0;
+ }
+ void readMarks(void)
+ {
+ cout << "Enter roll number: ";
+ cin >> rno;
+ cout << "Enter percentage: ";
+ cin >> perc;
+ }
+ void printMarks(void)
+ {
+ cout << "Roll No.: " << rno << endl;
+ cout << "Percentage: " << perc << "%" << endl;
+ }
+};
+class Student {
+private:
+ Marks objM;
+ char name[30];
+public:
+ //input student details
+ void readStudent(void)
+ {
+ //Input name
+ cout << "Enter name: ";
+ cin.getline(name, 30);
+ //input Marks
+ objM.readMarks();
+ }
+ //print student details
+ void printStudent(void)
+ {
+ //print name
+ cout << "Name: " << name << endl;
+ //print marks
+ objM.printMarks();
+ }
+};
+//main code
+int main()
+{
+ //create object to student class
+ Student std;
+ std.readStudent();
+ std.printStudent();
+ return 0;
+}
+
+
+7. Program to demonstrate Destructor
+
+
+#include <iostream> 
+using namespace std; 
+class Employee 
+{ 
+ public: 
+ Employee() 
+ { 
+ cout<<"Constructor Invoked"<<endl; 
+ } 
+ ~Employee() 
+ { 
+ cout<<"Destructor Invoked"<<endl; 
+ } 
+}; 
+int main(void) 
+{ 
+ Employee e1; //creating an object of Employee 
+ Employee e2; //creating an object of Employee 
+ return 0; 
+}
+
+
+8. Create an object of the class which is created dynamically using the 
+new operator and deleting it explicitly using the delete operator.
+
+
+#include <iostream>
+using namespace std;
+class Student {
+public:
+ Student()
+ {
+ cout << "Constructor is called!\n";
+ }
+ // Destructor
+ ~Student()
+ {
+ cout << "Destructor is called!\n";
+ }
+ 
+ void write()
+ {
+ cout << "Writing!\n";
+ }
+};
+int main()
+{
+ // Create an array of objects
+ Student* student = new Student();
+ // Function Call to write()
+ // using instance
+ student->write();
+ // De-allocate the memory
+ // explicitly
+ delete student;
+ return 0;
+}
+
+9. C++ program to define a Student class to read and print Student 
+information using an array of objects
+
+
+#include<iostream>
+using namespace std;
+class Student
+{
+ private:
+ int rno;
+ char name[20];
+ float avgmarks;
+ public:
+ void read_data();
+ void print_data();
+};
+void Student::read_data()
+{
+ cout<<"Enter the roll no. ";
+ cin>>rno;
+ cout<<"Enter name. ";
+ cin>>name;
+ cout<<"Enter Average Marks. ";
+ cin>>avgmarks;
+}
+void Student::print_data()
+{
+ cout<<rno<<"\t"<<name<<"\t"<<avgmarks<<endl;
+}
+int main()
+{
+ Student std[5];
+ for (int i=0;i<3;i++)
+ {
+ std[i].read_data();
+ }
+ cout<<"Student Information is"<<endl;
+ cout<<"RNo\tName\tAvg Marks"<<endl;
+ for (int i=0;i<3;i++)
+ {
+ std[i].print_data();
+ }
+ return 0;
+}
+
+
+10. Write a program in C++ to convert a decimal number into binary 
+without using an array and using the constructor and destructor.
+Decimal 23= Binary 10111
+Constructor:
+
+
+#include <iostream>
+using namespace std;
+class Decimal_Number
+{
+public:
+Decimal_Number(int n)
+{
+int i=1,j=n,Binary_Number=0;
+ cout<<"Please enter Decimal number : ";
+cin>>n;
+for(j=n;j>0;j=j/2)
+{
+Binary_Number=Binary_Number+(n%2)*i;
+i=i*10;
+n=n/2;
+}
+cout<<"binary number="<<Binary_Number;
+}
+~Decimal_Number()
+{
+cout<<"Destructor run , FREE MEMORY "<<endl;
+}
+};
+int main()
+{
+Decimal_Number obj(4);
+}
+
+
+1. Write C++ Program to display the cube of the number upto a given 
+integer using Destructor.
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class lst
+{
+private:
+int i,n;
+public:
+lst()
+ {
+ i=1;
+ n=0;
+ }
+ lst(int p, int q)
+ {
+ i=p;
+ n=q;
+}
+void display()
+{
+cout<<"enter the number :"<<endl;
+cin>>n;
+for(i=1; i<=n; i++)
+{
+cout<<" The cube of"<<i<<"is ="<<(i*i*i)<<endl;
+}
+}
+~lst()
+{
+cout<<" clear :"<<endl;
+}
+};
+int main()
+ {
+ int p,q;
+lst obj(p,q);
+obj.display();
+getch();
+}
+Please enter the number:
+4
+cube of 1 is: 1
+cube of 2 is: 8
+cube of 3 is: 27
+cube of 4 is: 64
+
+11. Write a c++ program to find out the sum of an A.P. series by 
+using the constructor overloading
+
+#include<iostream>
+using namespace std;
+class AP_Constructor
+{
+protected :
+int n1, AP_Difference, n2, i, ln, s1;
+public :
+AP_Constructor()
+{
+ s1 = 0;
+cout << "Input the starting number of the A.P. series: "<<endl;
+cin >> n1;
+cout << "Input the number of items for the A.P. series: "<<endl;
+cin >> n2;
+cout << "Input the common difference of A.P. series: "<<endl;
+cin>>T4Tutorials_Difference;
+ s1 = (n2 * (2 * n1 + (n2 - 1) * AP_Difference)) / 2;
+ ln = n1 + (n2 - 1) * AP_Difference;
+ cout << "The Sum of the A.P. series are : "<<endl;
+ for (i = n1; i <= ln; i = i + AP_Difference) 
+ {
+ if (i != ln)
+ cout << i << " + ";
+ else
+ cout << i << " = " << s1 << endl;
+ }
+}
+AP_Constructor(int n1, int n2,int AP_Difference)
+{
+ s1 = 0;
+ s1 = (n2 * (2 * n1 + (n2 - 1) * AP_Difference)) / 2;
+ ln = n1 + (n2 - 1) * AP_Difference;
+ cout << "The Sum of the A.P. series are : "<<endl;
+ for (i = n1; i <= ln; i = i + AP_Difference) 
+ {
+ if (i != ln)
+ cout << i << " + ";
+ else
+ cout << i << " = " << s1 << endl;
+ }
+}
+};
+int main()
+{
+int option;
+cout<<"Please Enter the 1 for AP_Constructor with No paranter 
+:"<<endl;
+cout<<"Please Enter the 2 for AP_Constructor with Paramter 
+: \n";
+cout<<"Please Enter the 1 or 2 here : ";
+cin>>option;
+system("cls");
+if(option==1)
+{
+cout<<"You Have Slected No Paramter AP_Constructoructor.... "<<endl;
+AP_Constructor a;
+}
+else if(option==2)
+{
+int n1,n2,AP_Difference;
+cout << "Input the starting number of the A.P. series: "<<endl;
+cin >> n1;
+cout << "Input the number of items for the A.P. series: "<<endl;
+cin >> n2;
+cout << "Input the common difference of A.P. series: "<<endl;
+cin>>AP_Difference;
+AP_Constructor (n1,n2,AP_Difference);
+}
+else
+{
+cout<<"Your Input is Wrong : Try Again."<<endl;
+}
+}
+
+
+12. Write a C++ Program to display the reverse of a number using 
+the constructor.
+
+#include<iostream>
+using namespace std;
+class Revnum
+{
+private:
+int n,i;
+public:
+Revnum()
+{
+cout<<"Enter number to reverse: ";
+cin>>n;
+}
+void out()
+{
+cout<<endl<<"The reverse of the Entered number: ";
+for(i=n;n>0;n=n/10)
+{
+cout<<n%10;
+}
+}
+};
+int main()
+{
+Revnum r;
+r.out();
+}
+
+
+13. Write a C++ Program to display the reverse of a number using 
+the destructor.
+
+
+#include<iostream>
+using namespace std;
+class Revnum
+{
+private:
+int n,i;
+public:
+Revnum()
+{
+cout<<"Enter number to Display its reverse: ";
+cin>>n;
+}
+~ Revnum()
+{
+cout<<endl<<" reverse of the Entered Number is: ";
+for(i=n;n>0;n=n/10)
+{
+cout<<n%10;
+}
+}
+};
+int main()
+{
+Revnum R;
+}
+Enter number to reverse: 678
+The reverse of the Entered number: 876
+
+
+14. Write a C++ Program to display the reverse of a number using 
+the constructor overloading.
+
+
+#include<iostream>
+using namespace std;
+class Revnum
+{
+private:
+int i;
+public:
+Revnum(int n)
+{
+cout<<endl<<"The reverse of the Entered number: ";
+for(i=n;n>0;n=n/10)
+{
+cout<<n%10;
+}
+}
+Revnum(long int a)
+{
+cout<<endl<<" The reverse of the Entered number: ";
+for(i=a;a>0;a=a/10)
+{
+cout<<a%10;
+}
+}
+};
+int main()
+{
+int choice;
+cout<<"Enter choice: ";
+cin>>choice;
+switch(choice)
+{
+case 0:
+{
+int n;
+cout<<"Enter a number to Display: ";
+cin>>n;
+Revnum r(n);
+break;
+}
+case 1:
+{
+long int a ;
+cout<<"Enter Number to Display: ";
+cin>>a;
+Revnum r(a);
+ break;
+ }
+default:
+cout<<"Invalid Choice:";
+}
+}
+
+
+15. Write C++ program to add two complex numbers using Binary 
+Operator Overloading.
+
+
+#include <iostream>
+using namespace std;
+class Complex {
+ private:
+ float real;
+ float imag;
+ public:
+ // Constructor to initialize real and imag to 0
+ Complex() : real(0), imag(0) {}
+ void input() {
+ cout << "Enter real and imaginary parts respectively: ";
+ cin >> real;
+ cin >> imag;
+ }
+ // Overload the + operator
+ Complex operator + (const Complex& obj) {
+ Complex temp;
+ temp.real = real + obj.real;
+ temp.imag = imag + obj.imag;
+ return temp;
+ }
+ void output() {
+ if (imag < 0)
+ cout << "Output Complex number: " << real << imag << "i";
+ else
+ cout << "Output Complex number: " << real << "+" << imag 
+<< "i";
+ }
+};
+int main() {
+ Complex complex1, complex2, result;
+ cout << "Enter first complex number:\n";
+ complex1.input();
+ cout << "Enter second complex number:\n";
+ complex2.input();
+ // complex1 calls the operator function
+ // complex2 is passed as an argument to the function
+ result = complex1 + complex2;
+ result.output();
+ return 0;
+}
+16. Write C++ program to overload unary operator ++.
+#include <iostream>
+using namespace std;
+class Count {
+ private:
+ int value;
+ public
+ :
+ // Constructor to initialize count to 5
+ Count() : value(5) {}
+ // Overload ++ when used as prefix
+ Count operator ++ () {
+ Count temp;
+ // Here, value is the value attribute of the calling object
+ temp.value = ++value;
+ return temp;
+ }
+ // Overload ++ when used as postfix
+ Count operator ++ (int) {
+ Count temp;
+ // Here, value is the value attribute of the calling object
+ temp.value = value++;
+ return temp;
+ }
+ void display() {
+ cout << "Count: " << value << endl;
+ }
+};
+int main() {
+ Count count1, result;
+ // Call the "Count operator ++ ()" function
+ result = ++count1;
+ result.display();
+ // Call the "Count operator ++ (int)" function
+ result = count1++;
+ result.display();
+ return 0;
+}
+
+
+17. WAP to Add members of two different classes using friend 
+functions.
+// Add members of two different classes using friend functions
+
+
+#include <iostream>
+using namespace std;
+// forward declaration
+class ClassB;
+class ClassA {
+ 
+ public:
+ // constructor to initialize numA to 12
+ ClassA() : numA(12) {}
+ 
+ private:
+ int numA;
+ 
+ // friend function declaration
+ friend int add(ClassA, ClassB);
+};
+class ClassB {
+ public:
+ // constructor to initialize numB to 1
+ ClassB() : numB(1) {}
+ 
+ private:
+ int numB;
+ // friend function declaration
+ friend int add(ClassA, ClassB);
+};
+// access members of both classes
+int add(ClassA objectA, ClassB objectB) {
+ return (objectA.numA + objectB.numB);
+}
+int main() {
+ ClassA objectA;
+ ClassB objectB;
+ cout << "Sum: " << add(objectA, objectB);
+ return 0;
+}
+
+
+18. WAP to Perform simple Calculations With a Friend Class in 
+C++.
+
+
+#include <iostream>
+using namespace std;
+class Exmp_A{
+ private:
+ int x;
+ // Declaring the friend class
+ friend class Exmp_B;
+ public:
+ // Initializing x value using a constructor
+ Exmp_A() : x(9) {}
+};
+class Exmp_B{
+ private:
+ int y;
+ public:
+ // Initializing y value using a constructor
+ Exmp_B() : y(13) {} 
+ // Function to perform addition
+ int sum(){
+ Exmp_A a;
+ return a.x + y;
+ }
+};
+int main(){
+ Exmp_B b;
+ cout << "Sum is: " << b.sum();
+ return 0;
+}
+
+
+19. WAP to Count the number of words in a string
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+void count_words(string str)
+{
+ /* create variable counter of type integer */
+ int count = 0;
+ /* loop through characters in string */
+ for(int i = 0; i < str.length(); i++)
+ {
+ /* check if current char is a space */
+ if ( str[i] == ' ' )
+ {
+ /* in such case, increment the counter */
+ count++;
+ }
+ }
+ /* increment the counter one last time for the last word */
+ count++;
+ cout << "Number of words: " << count << endl;
+}
+int main()
+{
+ string str = "one two three four";
+ cout << "Input string: " << str << endl;
+ count_words(str);
+ return 0;
+}
+
+
+4. Simple Calculator using templates.
+
+
+#include <iostream>
+using namespace std; 
+template <class T> 
+class Calculator { 
+private: 
+T num1, num2; 
+public: 
+Calculator(T n1, T n2) {
+num1 = n1; num2 = n2; }
+void displayResult() {
+cout << "Numbers: " << num1 << " and " << num2 << "." << endl;
+cout << num1 << " + " << num2 << " = " << add() << endl; 
+cout << num1 << " - " << num2 << " = " << subtract() << endl; 
+cout << num1 << " * " << num2 << " = " << multiply() << endl;
+cout << num1 << " / " << num2 << " = " << divide() << endl; 
+}
+T add() { 
+return num1 + num2; }
+T subtract() { 
+return num1 - num2; }
+T multiply() {
+return num1 * num2; } 
+T divide()
+{ return num1 / num2; } };
+int main() 
+{ 
+Calculator<int> intCalc(2, 1); 
+Calculator<float> floatCalc(2.4, 1.2); 
+cout << "Int results:" << endl; intCalc.displayResult(); 
+cout << endl << "Float results:" << endl; floatCalc.displayResult(); 
+return 0;
+5. C++ Program to Implement stack using Class Templates
+#include <iostream>
+#include <string>
+using namespace std;
+#define SIZE 5
+template <class T>
+class Stack {
+public:
+Stack();
+void push(T k);
+T pop();
+T topElement();
+bool isFull();
+bool isEmpty();
+private:
+int top;
+T st[SIZE];
+};
+template <class T> 
+Stack<T>::Stack()
+{ top = -1; }
+template <class T> 
+void Stack<T>::push(T k)
+{
+if (isFull()) {
+cout << "Stack is full\n";
+}
+cout << "Inserted element " << k << endl;
+top = top + 1;
+st[top] = k;
+}
+template <class T> 
+bool Stack<T>::isEmpty()
+{
+if (top == -1)
+return 1;
+else
+return 0;
+}
+template <class T> 
+bool Stack<T>::isFull()
+{
+if (top == (SIZE - 1))
+return 1;
+else
+return 0;
+}
+template <class T> 
+T Stack<T>::pop()
+{
+T popped_element = st[top];
+top--;
+return popped_element;
+}
+template <class T> 
+T Stack<T>::topElement()
+{
+T top_element = st[top];
+return top_element;
+}
+int main()
+{
+Stack<int> integer_stack;
+Stack<string> string_stack;
+integer_stack.push(2);
+integer_stack.push(54);
+integer_stack.push(255);
+string_stack.push("Welcome");
+string_stack.push("to");
+string_stack.push("GeeksforGeeks");
+cout << integer_stack.pop() << " is removed from stack"
+<< endl;
+cout << string_stack.pop() << " is removed from stack "
+<< endl;
+cout << "Top element is " << integer_stack.topElement()
+<< endl;
+cout << "Top element is " << string_stack.topElement()
+<< endl;
+return 0;
+}
+
+8 CreateVehicleClass withattributes { Manufacturer,YearOfManufature}theninherit 
+theVehicleclasstocreateLightMotorVehicleandHeavyMotorVehicleClasses 
+respectively. Light Motor Vehicle should have additional attribute {InfantsAllowed} 
+andHeavyMotorVehicleshouldhaveattribute{CargoCapacity}.WAPusingthis 
+pointer in thiscase
+
+#include<iostream>
+using namespace std;
+class vehicle
+{
+    protected:
+    string manufacturer;
+    int yearofmanufacture;
+    public:
+    void setData(string manufacturer,int yearofmanufacture)
+    {
+        this->manufacturer=manufacturer;
+        this->yearofmanufacture=yearofmanufacture;
+
+    }
+    void display()
+    {
+        cout<<"Year of manufacture "<<this->yearofmanufacture<<endl;
+   }
+
+};
+class lmv:public vehicle{
+    int infants;
+    public:
+     void setData(string manufacturer,int yearofmanufacture,int infants)
+     {
+        this->manufacturer=manufacturer;
+        this->yearofmanufacture=yearofmanufacture;
+        this->infants=infants;
+     }
+     void display()
+     {
+        cout<<"Manufacturer is : "<<this->manufacturer<<endl;
+        cout<<"Year of manufacturer : "<<this->yearofmanufacture<<endl;
+        cout<<"Infants allowed : "<<this->infants<<endl;
+     }
+
+};
+class hmv:public vehicle{
+    int cargocapacity;
+    public:
+     void setData(string manufacturer,int yearofmanufacture,int cargocapacity)
+     {
+        this->manufacturer=manufacturer;
+        this->yearofmanufacture=yearofmanufacture;
+        this->cargocapacity=cargocapacity;
+     }
+     void display()
+     {
+        cout<<"Manufacturer is : "<<this->manufacturer<<endl;
+        cout<<"Year of manufacturer : "<<this->yearofmanufacture<<endl;
+        cout<<"Capacity : "<<this->cargocapacity<<endl;
+     }
+
+};
+int main()
+{
+ lmv l;
+l.setData((std::string) "Honda", 1999, 2);
+ hmv h;
+h.setData((std::string) "TATA", 2023, 10000);
+l.display();
+h.display();
+return 0;
+}
+
+4. WAPtodemonstrateinheritance.IntheprogramLightMotorVehicleshouldbe 
+inherited from Class Vehicle. Vehicle should have attributes { Make, Year of 
+manufacture, Registration number, Mileage}. Theinherited class Light MotorVehicle 
+should have additional attribute {InfantPassengers Count}.Both base and inherited 
+classesshouldhaveconstructors tosetthevaluesandalsotheyshouldhavesetData() 
+functions.ThereshouldbedisplayData()functioninbaseandderivedclassesto 
+display the attributevalues
+
+
+
+#include<iostream>
+using namespace std;
+#include<string.h>
+class vehicle
+{
+    protected:
+    string make;
+    int yearofmanufacture;
+    string registrationnumber;
+    float mielage;
+    public:
+    vehicle(string m,int yom,string rno,float ml)
+    {
+        make=m;
+        yearofmanufacture=yom;
+        registrationnumber=rno;
+        mielage=ml;
+    }
+    void setdata(string m,int yom,string rno,float ml)
+    {
+        make=m;
+        yearofmanufacture=yom;
+        registrationnumber=rno;
+        mielage=ml;
+    }
+    void displaydata()
+    {
+        cout<<"Make of a vehicle : "<<make<<endl;
+        cout<<"Year of manufacture : "<<yearofmanufacture<<endl;
+        cout<<"Registration number : "<<registrationnumber<<endl;
+        cout<<"Mielage : "<<mielage<<endl;
+
+    }
+};
+class Lightmotorvehicle:public vehicle
+{
+    int infantpassengercount;
+    Lightmotorvehicle(string makval,int yomval,string rval,float mlval,int inval)
+    {
+        make=makval;
+        yearofmanufacture=yomval;
+        registrationnumber=rval;
+        mielage=mlval;
+        infantpassengercount=inval;
+    }
+    public:
+    void setdata(string makval,int yomval,string rval,float mlval,int inval)
+    {
+        make=makval;
+        yearofmanufacture=yomval;
+        registrationnumber=rval;
+        mielage=mlval;
+        infantpassengercount=inval;
+    }
+    void display()
+    {
+         cout<<"Make of a vehicle : "<<make<<endl;
+        cout<<"Year of manufacture : "<<yearofmanufacture<<endl;
+        cout<<"Registration number : "<<registrationnumber<<endl;
+        cout<<"Mielage : "<<mielage<<endl;
+        cout<<"Infantpassengercount : "<<infantpassengercount<<endl;
+    }
+};
+int main()
+{
+vehicle v1("TVS", 1999, "KA02C1234", 70.0);
+Lightmotorvehicle v2("TataIndigo", 2013, "KA04C3922", 13.5, 2);
+v1.displaydata();
+v2.displaydata();
+v1.setdata("Honda", 2003, "KA04C1564", 90);
+v2.setdata("HondaCivic", 2009, "KA05C5678", 23, 2);
+v1.displaydata();
+v2.display();
+return 0;
+}
+
