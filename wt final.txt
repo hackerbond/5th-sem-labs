@@ -1,0 +1,1630 @@
+							Lab sheet 1 
+Programs for Module 1
+Problem Statement :
+ABC Book House plans to sell their books online, So you are hired as a software developer to
+create a website for them, Your first task is to create a static web page using HTML. The web
+page should be having following things
+1) Top of the page will display the store name and other retaled informations. address, and
+contact information .
+2) Middel of the page will display the book information like s.no, book name, author
+name, and price with a table format.
+3) Bottom of the page will display the contact information .
+HTML Tags used:
+<html> <head><title><body><h1> <h2><h3>
+<h4><p><center><hr><table><tr><th><td><br>
+Solution:
+<!DOCTYPE html>
+<html>
+<head>
+<title>ABC Book Shop</title>
+</head>
+<body bgcolor="yellow"> <center>
+<h1> ABC Book Shop </h1>
+<p>****************************</p>
+<h2>Happy Shopping</h2> </center>
+<hr width="100%" color="green" size="5px" align="left" />
+<center>
+<h1>Novels Books </h1><br>
+<table border=1>
+<tr>
+ <th width="50" height="50"> S.No</th>
+ <th width="350" > Book Name</th>
+ <th width="350" > Auther Name</th>
+ <th width="150" > Price </th>
+ </tr>
+<tr>
+ <td height="40" align="center"> 1</td>
+ <td height="40">Lord of the Rings</td>
+ <td height="40">J.R.R. Tolkien</td>
+ <td height="40" align="center">$10 </td>
+ </tr>
+<tr>
+ <td height="40" align="center"> 2</td>
+ <td height="40" >Harry Potter</td>
+ <td height="40">J.K. Rowling</td>
+ <td height="40" align="center">$30</td>
+ </tr>
+<tr>
+ <td height="40" align="center"> 3</td>
+ <td height="40" >Harry Potter</td>
+ <td height="40">J.K. Rowling</td>
+ <td height="40" align="center">$30</td>
+ </tr>
+<tr>
+ <td height="40" align="center"> 4</td>
+ <td height="40" >Harry Potter</td>
+ <td height="40">J.K. Rowling</td>
+ <td height="40" align="center">$30</td>
+ </tr>
+<tr>
+ <td height="40" align="center"> 5</td>
+ <td height="40" >Harry Potter</td>
+ <td height="40">J.K. Rowling</td>
+ <td height="40" align="center">$30</td>
+ </tr>
+<tr>
+ <td height="40" align="center"> 6</td>
+ <td height="40" >Harry Potter</td>
+ <td height="40">J.K. Rowling</td>
+ <td height="40" align="center">$30</td>
+ </tr>
+<tr>
+ <td height="40" align="center"> 7</td>
+<td height="40" >Harry Potter</td>
+ <td height="40">J.K. Rowling</td>
+ <td height="40" align="center">$30</td>
+ </tr>
+<tr>
+ <td height="40" align="center"> 8</td>
+ <td height="40" >Harry Potter</td>
+ <td height="40">J.K. Rowling</td>
+ <td height="40" align="center">$30</td>
+ </tr>
+</table>
+ <hr width="100%" color="red" size="5px" align="left" />
+<h2> Contact:</h2>
+<h3>Mahatma Gandhi Rd, Haridevpur,
+<br>Shanthala Nagar, Ashok Nagar, Bengaluru,
+<br>Karnataka 560001
+<h4>Copyright © 2022 5CSE/SoE/PU</h4></h3>
+</center>
+</body>
+</html>
+
+						Lab sheet 2
+ 
+Programs for Module 1
+Problem Statement :
+You have been hired as a software developer for Eureka Info Solutions. They are already doing online
+shoping project for ABC Mobile shop. You are part of a development team and your task is to create
+a static web page using HTML.
+The web page should be having following things:
+1) Top of the page will display the Mobile shop Banner (include image and text) and other
+retaled informations.
+2) New offers and notifications are in running text.
+3) Middel of the page will display the mobile information, Clicking on mobile name/image the
+page will take you to the next page which will display the mobile image and specification in
+tabular format.
+4) Bottom of the page will display the contact information .
+HTML Tags used:
+<html> <head> <title> <body> <h1> <h2> <h3> <a> < img> <marquee>
+<h4> <p> <center> <hr> <table> <tr> <th> <td> <br> <font>
+Solution:
+<!DOCTYPE html>
+<html>
+<head> <title>ABC Mobile Shop</title> </head>
+<body bgcolor="#F0FFFF"> <center>
+<h1> ABC Mobile Shop </h1>
+<p>****************************</p>
+<h2>Happy Shopping</h2> </center>
+<font size="5" color="Blue">
+<marquee style="border:solid" direction = "right">*****ABC Mobile shop Online
+Offers****** </marquee></font>
+<center>
+<img src="image/mobile banner.jpg" alt="Image not loaded" width="100%"
+height="300"><br>
+<table border="0" >
+ <tr >
+ <th > <a href = "https://www.amazon.in" target = "_blank"><img src="image/
+OnePlus Nord CE 2 Lite 5G.webp" width="200" height="300"></a></th>
+ <th > <a href = "https://www.amazon.in" target = "_blank"><img src="image
+/OnePlus Nord CE 2 Lite 5G.webp" width="200" height="300"></a></th>
+ <th > <a href = "https://www.amazon.in" target = "_blank"><img src="image
+/OnePlus Nord CE 2 Lite 5G.webp" width="200" height="300"></a></th>
+ <th > <a href = "https://www.amazon.in" target = "_blank"><img src="image
+/OnePlus Nord CE 2 Lite 5G.webp" width="200" height="300"></a></th>
+ <th > <a href = "https://www.amazon.in" target = "_blank"><img src="image
+/OnePlus Nord CE 2 Lite 5G.webp" width="200" height="300"></a></th>
+ <th > <a href = "https://www.amazon.in" target = "_blank"><img src="image
+/OnePlus Nord CE 2 Lite 5G.webp" width="200" height="300"></a></th>
+ </tr>
+ <tr >
+ <th > <a href = "https://www.amazon.in" target = "_blank">OnePlus Nord
+<br>CE 2 Lite 5G<br> M33 5G</a></th></th>
+ <th > <a href = "https://www.samsung.com" target = "_blank">Redmi 9 Activ
+<br>(Coral Green, 6GB RAM <br>, 128GB Storage)</a></th>
+ <th > <a href = "https://www.samsung.com" target = "_blank">Redmi 9 Activ
+<br>(Coral Green, 6GB RAM <br>, 128GB Storage)</a></th>
+ <th > <a href = "https://www.amazon.in/ " target = "_blank">OnePlus Nord
+<br>CE 2 Lite 5G<br> M33 5G</a></th></th>
+ <th > <a href = "https://www.samsung.com/ " target = "_blank">Redmi 9 Activ
+<br>(Coral Green, 6GB RAM <br>, 128GB Storage)</a></th>
+ <th > <a href = "https://www.amazon.in" target = "_blank">OnePlus Nord
+<br>CE 2 Lite 5G<br> M33 5G</a></th></th>
+ </tr> </table>
+ <hr width="100%" color="red" size="5px" align="left" />
+<h2> Contact:</h2>
+<h3> ABC Mobile shop<br>Mahatma Gandhi Rd, Haridevpur,
+<br>Shanthala Nagar, Ashok Nagar, Bengaluru,
+<br>Karnataka 560001
+<h4>Copyright © 2022 5CSE/SoE/PU</h4></h3>
+</center>
+</body>
+</html>
+
+						Lab sheet 3
+
+ Programs for Module 1
+Problem Statement :
+The Computer Science Engineering department is planning to organize a symposium. Symposium
+events are to be held with paper and project presentations, quizzes, etc. Students should register the
+interesting events. Assist the web page design team to create a registration form for the symposium
+using appropriate HTML tags.
+The web page should be having following things:
+1. The top of the page will display the symposium event Banner (including image and text) and
+other related information.
+2. The Registration page will get the following details from the participants. Participant Name,
+Branch, college name, communication Address, E-mail id, mobile no, age, state, Gender,
+Events (Paper Presentation, Quiz, etc),etc.
+HTML Tags used:
+<html> <head> <title> <body> <h1> <h2> <h3> <a> < img> <form> < input> <textarea> <select> 
+<option> <h4> <p> <center> <hr> <table> <tr> <th> <td> <br> <font> < button > <fieldset>
+Solution:
+<!DOCTYPE html>
+<html>
+<head>
+<title>registration form</title>
+</head>
+<body bgcolor="Lightskyblue">
+<center><img src="image/PU Logo.png"/>
+<h1 >Symposium Event Registration </h1></center>
+<hr width="100%" color="red" size="5px" align="left" />
+<h2 ALIGN="CENTER">Registration form</h2>
+<form action="Welcome.html" method="post">
+<fieldset><b>
+<table border="0"align="center" height="400">
+<tr>
+<td><label for="name">Name: </label></td>
+<td><input id="name" maxlength="50" name="name" type="text" /></td>
+</tr>
+<tr>
+<td><label for="branch">Branch: </label></td>
+<td><input id="branch" maxlength="50" name="branch" type="text" /></td>
+</tr>
+<tr>
+<td><label for="Institution">Institution: </label></td>
+<td><input id="Institution" maxlength="50" name="Institution" type="text" /></td>
+</tr>
+<tr>
+<td><label for="email">Email_Address:</label></td>
+<td><input id="email" maxlength="50" name="email" type="email" /></td>
+</tr>
+<tr>
+<td><label for="mobile">Mobile No:</label></td>
+<td><input id="mobile" maxlength="10" name="mobile" type="text" /></td>
+</tr>
+<tr>
+<td><label for="address">Address</label></td>
+<td valign="middle" align="center"><textarea rows="4"></textarea></td>
+</tr>
+<tr>
+<td><label for="State">State:</label></td>
+<td><input id="State" maxlength="50" name="State" type="text" /></td>
+</tr>
+<tr>
+<td><label for="DoB">DoB:</label></td>
+<td><input id="DoB" maxlength="50" name="DoB"type="date" /></td>
+</tr>
+<tr>
+<td><label for="gender">Gender:</label></td>
+<td><input id="gender" maxlength="50" name="gender"type="radio" />Male
+<input id="gender" maxlength="50" name="gender"type="radio" />Female</td>
+</tr>
+<tr>
+<td><label for="Events">Events:</label></td>
+<td><Select> <option>Paper Presentation</option>
+<option>Project Expo</option>
+<option>Code Debugging</option>
+<option>Quis</option>
+</Select> </td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<input name="Submit" type="Submit" value="Submit" />&nbsp;&nbsp;&nbsp;
+<input name="reset" type="reset" value="Reset" />
+</td>
+</tr>
+</table></b>
+</fieldset>
+</form>
+</body>
+</html>
+
+						Lab sheet 4 
+
+Programs for Module 1
+Problem Statement :
+Eureka Info Solutions has acquired online shoping cart project from a leading bookseller in
+Bangalore. They want to sell engineering textbooks online, so you are the team leader of the project
+and divide the modules based on user requirement, given requirement/module is designed by
+developers,and finally you integrate all the modules into one static website using HTML.
+The web site should be having following things:
+1. HOME PAGE: The static home page must contain three frames.
+• Top frame:- top of the page to place PU banner and links to homepage, login page,
+registration page and catalogue page.
+• Left frame:- at least four links for navigation which will display the catalogue of Respective
+links.
+• Right frame:- the pages to links in the left frame must be loaded here initially it Contains the
+description of the website.
+2) LOGIN PAGE – to get username and password
+3) CATOLOGUE PAGE: The catalogue page should contain the details of all the books available
+in the web site in a table.
+4) REGISTRATION PAGE – to get user details
+HTML Tags used:
+<html> <head> <title> <body> <h1> <h2> <h3> <a> < img> <form> < input> <textarea> <select> 
+<option> <h4> <p> <center> <hr> <table> <tr> <th> <td> <br> <font> < button > <fieldset>
+<frame><frameset>
+Solution:
+home.html
+<frameset rows="30%,*">
+<frame src="top.html" name="topframe">
+<frameset cols="15%,*">
+<frame src="left.html" name="leftframe">
+<frame src="right.html" noresize name="rightframe" >
+</frameset>
+top.html
+<html>
+<body bgcolor="YellowGreen ">
+<center>
+<marquee bgcolor="yellow" width="650" behavior="alternate">
+<font face="Bookman Old Style" size="8" color="green"><b><i>PU Online 
+Book Store</i></b>
+</font>
+</marquee> <br>
+<font face="Bookman Old Style" size="3" color="white"><b>Created & 
+Maintained by Presidency University</b></font>
+</center>
+<br>
+<table width="100%" height="50%" cellspacing=10><tr align="center">
+<td> <a href="Home.html" target="_parent">
+<font face="Brush Script" size="6" color="navy">HOME </a> </td>
+<td> <a href="login.html" target="rightframe">
+<font face="Brush Script" size="6" color="navy">LOGIN</a> </td>
+<td> <a href="registration.html" target="rightframe">
+<font face="Brush Script" size="6" color="navy">REGISTER </a> </td>
+<td> <a href="catalogue.html" target="leftframe">
+<font face="Brush Script" size="6" color="navy">CATALOGUE</a> </td>
+</tr>
+</table>
+</body>
+</html>
+left.html
+<html>
+<body align="center" bgcolor="bisque"> <br>
+<img src="ebook.png" width="200" height="400"/><br><br>
+</body>
+</html>
+right.html
+<html>
+<body bgcolor="orange">
+<center>
+<img src="D:\WT\image\PUlogo.jpg" height="170"><br>
+<font face="Bookman Old Style" size="5" color="blue">
+<h1><b>Welcome to the Online Book Store!!!</b></font><br />
+<font face="Bookman Old Style" size="5" color="red">
+<h2><b> "A Huge Collection Of Engineering E-Books"</b> </h2> </font>
+</center>
+</body>
+</html>
+cse.html
+<html>
+<body bgcolor="Plum">
+<h1><font color="blue">COMPUTER SCIENCE ENGINEERING </font></h1>
+<h2>
+<ul type="square">
+<li><a href="DataStructures.html"/>Data Structures using Python</a>
+</li>
+<li>Web Technologies</li> <li>Linux Programming</li>
+<li>Artificial Intelligence</li>
+</ul>
+</h2>
+</body>
+</html>
+ece.html
+<html>
+<body bgcolor="Plum">
+<h1><font color="blue">Electronics and Communication Engineering</font>
+</h1>
+<h2>
+<ul>
+<li>Digital Circuits</li> <li>Signals and Systems</li> <li>Digital 
+Communication</li>
+</ul>
+</h2>
+</body>
+</html>
+catalogue.html
+<html>
+<body align="center" bgcolor="bisque"> <br>
+<a href="cse.html" target="rightframe"><font size="6">CSE</font> </a>
+<br><br>
+<a href="ece.html" target="rightframe"><font size="6">ECE</font></a>
+<br><br>
+<a href="it1.html" target="rightframe"><font size="6">IT</font></a>
+<br><br>
+<a href="eee.html" target="rightframe"><font size="6">EEE</font></a>
+<br><br>
+<a href="mech.html" target="rightframe"><font size="6">MECH</font></a>
+<br>
+</body>
+</html>
+login.html:
+<html>
+<body bg color="pink">
+<basefont face="Cambria" size="4"> <br>
+<center>
+<font face="Bookman Old Style" size="7" color="purple">
+<b>Enter Login Details:</b>
+</font>
+</center>
+<form name="f1" method="post" action="right.html">
+<table align="center" width="100" height="150" cellspacing=”15”>
+<tr><td><b>Login ID:</b></td>
+<td><input type="text" name="t1"></td>
+</tr>
+<tr>
+<td><b>Password:</b></td>
+<td><input type="password" name="t2"></td>
+</tr>
+<tr align="center">
+<td><input type="submit" name="b1" value="Submit"></td>
+<td><input type="reset" name="b2" value="Reset"></td>
+</tr>
+</table> </form> </basefont> </body> </html>
+Registration.html
+<html>
+<head><title>Registration Form</title></head>
+<body bgcolor="#E4F0F8">
+<center><font color="blue" size="6" face="arial">Registration Form
+</font> </center><br />
+<form action="right.html">
+First Name(Minimum 6 characters)<font color="red">* </font>
+<input type='text' id='firstname' /><br /><br />
+Last Name<font color="red"><font color="red">* </font> </font>
+<input type='text' id='lastname' /><br /><br />
+EmailAddress<font color="red">* </font>
+<input type='text' id='email' /><br />
+<font color="red">(one e-mail id only):</font>
+<font color="redblue">e.g. smith@hotmail.com</font><br /><br/>
+Password(minimum 6 characters)<font color="red">* </font>
+<input type='password' id='pass'><br /><br/>
+Address<font color="red">* </font>
+<textarea rows="2" cols="20" id='addr' /></textarea> <br /> <br/>
+Mobile No<font color="red">* </font>
+<input type='text' id='mobileno' /><br />
+Gender: <input type='radio' name="gender">male
+<input type='radio' name="gender">female<br/><br />
+<input type='Submit' value='submit' />
+<input type='Reset' value='reset' />
+</form> </body> </html>
+DataStructures.html
+<html>
+<body bgcolor="pink">
+<form action="order.html">
+<table border="1" width="100%">
+<tr> <th> <img src="D:\WT\image\data-structures-using-python.webp"
+width=100 height=100/> </th>
+<th> Book: Data Structures using Python <br> Author: Vasudevan Shriram K 
+<br> Publication:Oxford Oxford Press</th> <th>531 </th>
+<th> <input type="submit" value="Add to cart"/></th> </tr>
+<tr>
+<th> <img src="D:\WT\image\Data-Structures-And-Algorithms-In-Python.jpg"
+width=100 height=100/></th>
+<th> Book: Data Structures And Algorithms In Python <br> Author:Michael 
+T. Goodrich, Roberto Tamassia <br> Publication: Wiley India</th> <th>
+898 </th>
+<th> <input type="submit" value="Add to cart"/></th> </tr>
+</table>
+</form>
+</body>
+</html>
+order.html
+<html>
+<head><title>order conformation</title></head>
+<body bgcolor="cyan">
+<center>
+<pre><strong>
+<b>Your order Is Conformed
+</strong></pre>
+<h2><b>THANK YOU...Visit Again</h2>
+</center>
+</body>
+</html>
+
+						Lab sheet 5
+
+ 
+Programs for Module 2
+Problem Statement :
+Design a document using XHTML and CSS to create an Admission registration form.
+The web page should be having following things:
+1. The first page displays instructions with a register button and applying external CSS
+2. Second page to get essential student data and apply inline, internal CSS.
+Solution:
+Style.css
+ul
+{
+text-align:left;
+color:blue;
+font-family:Cambria;
+font-size:larger;
+text-indent:20px;
+margin: 10px 0;
+}
+h2
+{
+text-align:center;
+color:rgb(255, 123, 0);
+text-decoration:underline;
+text-transform:uppercase;
+letter-spacing:-3px;
+word-spacing:20px;
+font-size:larger;
+}
+Instructions.html
+<!DOCTYPE html>
+<html>
+<title>Online HTML Editor</title>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-color:#b9ecf0dc">
+<h2>INSTRUCTIONS</h2>
+<center>
+<form action="LS5.html" method="get">
+<table width="90%">
+<tr><td>
+<ul>
+<li>The online application is for admission to programmes offered in 
+Presidency University.</li>
+<li>Email ID submitted at the time of registration will be used for 
+all correspondences until enrolment is completed. </li>
+<li>Change in Email ID will NOT be permitted under any 
+circumstances.</li>
+<ol>
+<li>Register and verify your email ID</li>
+</ol>
+</ul>
+</td>
+</tr>
+<tr>
+<th><button type="submit" value="Submit">Register</button></th>
+</tr>
+</table>
+</form>
+</center>
+</body>
+</html>
+Registration.html
+<html>
+<head>
+<title>Student Registration Form </title>
+<style>
+body{
+background-position:center center;
+background-attachment:fixed;
+background-color:rgb(236, 103, 103);
+}
+h2 {
+font-family: verdana;
+font-size: 24px;
+font-style: normal;
+font-weight: bold;
+color: rgb(246, 246, 250);
+text-align: center;
+text-decoration: underline
+}
+table {
+font-family: verdana;
+color: white;
+font-size: 16px;
+font-style: normal;
+font-weight: bold;
+background: #412fe7;
+border-collapse: collapse;
+border: 4px solid #000000;
+border-style: dashed;
+}
+table.inner {
+border: 10px
+}
+input[type=text],
+input[type=email],
+input[type=number] {
+width: 50%;
+padding: 6px 12px;
+margin: 5px 0;
+box-sizing: border-box;
+}
+input[type=submit],
+input[type=reset] {
+width: 15%;
+padding: 8px 12px;
+margin: 5px 0;
+box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<h2>Admission Registration 2022-23 </h2>
+<h2>Student Registration Form </h2>
+<form action=" Instructions.html" method="get">
+<table align="center" cellpadding="10">
+<tr>
+<td>First Name</td>
+<td><input type="text" name="FirstName" maxlength="50"
+placeholder="Learn" />(Max 50 Characters Allowed)
+</td>
+</tr>
+<tr>
+<td>Last Name</td>
+<td><input type="text" name="LastName" maxlength="50"
+placeholder="Programo" />(Max 50 Characters Allowed)
+</td>
+</tr>
+<tr>
+<td>Email ID</td>
+<td><input type="email" name="EmailID" maxlength="100"
+placeholder="contact@learnprogramo.com" /></td>
+</tr>
+<tr>
+<td>Mobile Number</td>
+<td>
+<input type="text" name="MobileNumber" maxlength="10"
+placeholder="1234567890" />(10 Digits Allowed)
+</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio" name="Gender" value="Male" />Male
+<input type="radio" name="Gender" value="Female" />Female
+</td>
+ </tr>
+ <tr>
+<td>Date of Birth(DOB)</td>
+<td> <input type="date" name="DOB" /> </td>
+</tr>
+<tr>
+<td>Address<br /><br /><br /></td>
+<td><textarea name="Address" rows="10" cols="50"></textarea></td>
+</tr>
+<tr>
+<td>City</td>
+<td><input type="text" name="City" maxlength="50"
+placeholder="Bangaluru" />(Max 50 Characters Allowed)
+</td>
+</tr>
+<tr>
+<td>Pin Code</td>
+<td><input type="Number" name="PinCode" maxlength="6"
+placeholder="530068" />(Max 6 Numbers Allowed)
+</td>
+</tr>
+<tr>
+<td>State</td>
+<td><input type="text" name="State" maxlength="50"
+placeholder="karnataka" /> (Max 50 Characters Allowed)
+</td>
+</tr>
+<tr>
+<td>Country</td>
+<td><input type="text" name="Country" placeholder="India" /></td>
+</tr>
+ <tr>
+<td>Hobbies <br /><br /><br /></td>
+<td>
+<input type="checkbox" name="HobbyDrawing" value="Drawing" /> Drawing
+<input type="checkbox" name="HobbySinging" value="Singing" /> Singing
+<input type="checkbox" name="HobbyDancing" value="Dancing" /> Dancing
+<input type="checkbox" name="HobbyCooking" value="Cooking" />Sketching
+<br />
+<input type="checkbox" name="HobbyOther" value="Other"> Others
+<input type="text" name="Other_Hobby" maxlength="50" placeholder="ExTeaching" />(Max 50 Characters Allowed)
+</td>
+</tr>
+<tr>
+<td>Qualification <br /><br /><br /></td>
+<td>
+<br />
+<input type="checkbox" name="HighSchool" value="High School" />
+High School(10th)<br>
+<input type="checkbox" name="HigherSchool" value="Higher School" />
+Higher School(12th)<br />
+<input type="checkbox" name="Graduation" value="Graduation" />
+Graduation(Bachelors)<br />
+<input type="checkbox" name="PostGraduation" value="Post Graduation" />
+Post Graduation(Masters)<br />
+</td>
+</tr>
+<tr>
+<td>Courses<br />Applied For</td>
+<td>
+<select name="Course" id="1">
+<option>BCA(Bachelor of Computer Applications)</option>
+<option>B.Com(Bachelor of Commerce)</option>
+<option>B.Sc(Bachelor of Science)</option>
+<option>B.Tech - School of Engineering</option>
+<option>BBL - Law </option>
+</select>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
+							Lab sheet 6 
+
+
+Module 2
+Problem Statement:
+Mr. Arun Student of Presidency University wants to create an attractive web page for Presidency 
+University using HTML and CSS with following specifications.
+• Split the web page into two parts using frames, top section 20% and bottom section 80%.
+• Place your college logo at the top of the page with menu’s (About, Academic, Admission, 
+Facilities, etc). Create hyperlink for all menus.
+• Create a web page about the college linked at the bottom of the frame.
+• Create a web page about the Academic linked at the bottom of the frame.
+• Create a web page about the admission, list out the departments, click any deportment name 
+that connects to the registration page and apply the position concept in CSS.
+• Create a web page about the Facilities, list out the college facilities and display the images 
+using floating concepts in CSS.
+• Create a web page about the login page linked at the bottom of the frame.
+Solution
+Home.html
+frameset rows="25%,*">
+<frame src="top.html" name="top">
+<frame src="bottom.html" noresize name="bottom" >
+</frameset>
+</frameset>
+Top.html
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+<style>
+* {
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #151925;
+font-family: sans-serif;
+font-weight: bold;
+}
+a
+{
+position: relative;
+display: inline-block;
+padding:25px 15px;
+margin:20px 10px;
+color: #03e9f4;
+text-decoration: none;
+text-transform: uppercase;
+transition: 0.9s;
+/* letter-spacing: 2px; */
+overflow: hidden;
+margin-right:20px;
+}
+a:hover
+{
+background: #03e9f4;
+color: #050801;
+box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+-webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+} 
+a:nth-child(1)
+{
+filter:hue-rotate(270deg);
+}
+a:nth-child(2)
+{
+filter:hue-rotate(110deg);
+}
+a:nth-child(3)
+{
+filter:hue-rotate(200deg);
+}
+a:nth-child(4)
+{
+filter:hue-rotate(270deg);
+}
+a:nth-child(5)
+{
+filter:hue-rotate(110deg);
+}
+a:nth-child(6)
+{
+filter:hue-rotate(186deg);
+}
+a span
+{
+position: absolute;
+display:block;
+}
+a span:nth-child(1)
+{
+top:0;
+left:0;
+width:100%;
+height:2px;
+background: linear-gradient(90deg, transparent,#03e9f4);
+animation: animate1 1s linear infinite;
+}
+@keyframes animate1 
+{
+0%{left:-100%;}
+50%,100%{left:100%;}
+}
+a span:nth-child(2)
+{
+top:-100%;
+right:0;
+width:2px;
+height:100%;
+background: linear-gradient(180deg, transparent,#03e9f4);
+animation: animate2 1s linear infinite;
+animation-delay: 0.25s;
+}
+@keyframes animate2 
+{
+0%{top:-100%}
+50%, 100%{top:100%;}
+}
+a span:nth-child(3)
+{
+bottom:0;
+right:0;
+width:100%;
+height:2px;
+background: linear-gradient(270deg, transparent,#03e9f4);
+animation: animate3 1s linear infinite;
+animation-delay: 0.5s;
+}
+@keyframes animate3 
+{
+0%{right:-100%}
+50%, 100%{right:100%;}
+}
+a span:nth-child(4)
+{
+bottom:-100%;
+left:0;
+width:2px;
+height:100%;
+background: linear-gradient(360deg, transparent,#03e9f4);
+animation: animate4 1s linear infinite;
+animation-delay: 0.75s;
+/* border-radius:20px; */
+}
+@keyframes animate4 
+{
+0%{bottom:-100%}
+50%, 100%{bottom:100%;}
+}
+</style>
+</head>
+<body>
+<img src="pulogo.png" alt="PU Logo" style="background-color:white; padding:10px;borderradius: 10px; margin-top: 5px;margin-bottom: 5px; height:100px; border:3px solid lightgrey">
+<a href="about.html" target="bottom">
+Home<span></span>
+<span></span>
+<span></span>
+<span></span>
+</a>
+<a href="academics.html" target="bottom">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+Academic
+</a>
+<a href="admission.html" target="bottom">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+Admissions
+</a>
+<a href="facilities.html" target="bottom">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+Facilities
+</a>
+<a href="login.html" target="bottom">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+Login
+</a>
+<a href="Register.html" target="bottom">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+Register
+</a>
+</body>
+</html>
+About.html
+<html>
+<head>
+<style>
+body
+{
+background-color: rgb(193, 193, 189);
+}
+</style>
+</head>
+<body>
+<h1> Over View</h1>
+<p><b> About the University</p>
+<img src="pu.jpg">
+</body>
+</html>
+Academics.html
+<html>
+<body>
+<h1 style="text-align:center"> WELCOME<br> TO <br>PRESIDENCY UNIVERSITY 
+ </h1>
+</body> 
+</html>
+Admission.html
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+<style>
+body
+{
+background-color: rgba(189, 189, 188, 0.79);
+}
+.static
+{
+position:sticky;
+top:0;
+right:0;
+display: inline;
+float: right;
+font-size:25px; 
+border-radius: 15px;
+padding:10px;
+background-color: aliceblue;
+box-shadow: 0 0 25px black;
+}
+li
+{
+list-style: none;
+margin:8px 5px;
+}
+a
+{
+text-decoration: none;
+color:rgb(50, 53, 51);
+}
+li:hover
+{
+border:2px solid black;
+display:inline-block;
+padding:8px;
+color: azure;
+border-radius: 20px;
+background-color:rgb(37, 38, 43);
+}
+h1
+{
+/* border:2px solid black; */
+display: inline-block;
+padding:5px;
+color:darkslateblue;
+text-shadow: 2px 1px 2px rgb(120, 127, 131);
+}
+</style>
+</head>
+<body>
+<div class="static">
+<a href="register.html"> For Admission Click Here</a></div>
+<h1 >Admissions Open </h1>
+<ul>
+<a href="register.html"><li>School of Engineering</li></a>
+<a href="register.html"><li>School of Law</li></a>
+<a href="register.html"><li>School of Management</li></a>
+<a href="register.html"><li>School of Commerce</li></a>
+<a href="register.html"><li>School of Design</li></a>
+</ul>
+</body>
+</html>
+Facilities.html
+<html>
+<head>
+<title>Facilities</title>
+<style>
+body
+{
+background-color: rgb(211, 215, 211);
+}
+img
+{ 
+float:right;
+height:200px;
+width:350px;
+border-radius: 20px;
+margin:110px 19px;
+}
+p
+{
+margin:29px 23px;
+font-size: 24px;
+width:750px;
+text-align: justify;
+}
+h1
+{
+font-family:'Courier New', Courier, monospace;
+font-size:30px;
+margin:25px 203px;
+border:2px solid black;
+display: inline-block;
+padding:5px;
+border-radius: 15px;
+background-color: lightgray;
+}
+#a2
+{
+float: left;
+margin:160px 10px;
+}
+#P2
+{
+/* border:2px solid black; */
+margin:10px 370px;
+width:650px;
+}
+#h2
+{
+margin:10px 10px;
+}
+</style>
+</head>
+<body>
+<img src="Library.jpg" alt="Library" class="image" id="a1">
+<h1>Library</h1>
+<p>
+The Presidency University reference and lending library is well-stocked with a vast collection of 
+books, reports, journals and periodicals. The library also provides access to the best of business and 
+management-related digital resources through its subscription to various databases consisting of 
+scholarly and industry-relevant content. Students utilize these services for their classroom-related 
+work and for further research into their areas of interest.
+</p>
+<img src="classroom.jpg" alt="Library" class="image" id="a2">
+<h1 #id="H2">Classrooms</h1>
+<p id="P2">
+The Presidency University reference and lending library is well-stocked with a vast collection of 
+books, reports, journals and periodicals. The library also provides access to the best of business and 
+management-related digital resources through its subscription to various databases consisting of 
+scholarly and industry-relevant content. Students utilize these services for their classroom-related 
+work and for further research into their areas of interest.
+</p>
+<img src="Library.jpg" alt="Library" class="image" id="a1">
+<h1>Library</h1>
+<p>
+The Presidency University reference and lending library is well-stocked with a vast collection of 
+books, reports, journals and periodicals. The library also provides access to the best of business and 
+management-related digital resources through its subscription to various databases consisting of 
+scholarly and industry-relevant content. Students utilize these services for their classroom-related 
+work and for further research into their areas of interest.
+</p>
+<img src="classroom.jpg" alt="Library" class="image" id="a2">
+<h1 #id="H2">Classrooms</h1>
+<p id="P2">
+The Presidency University reference and lending library is well-stocked with a vast collection of 
+books, reports, journals and periodicals. The library also provides access to the best of business and 
+management-related digital resources through its subscription to various databases consisting of 
+scholarly and industry-relevant content. Students utilize these services for their classroom-related 
+work and for further research into their areas of interest.
+</p>
+</body>
+</html>
+Login.html
+<html>
+<head>
+<title>Login_Page</title>
+</head>
+<body>
+<h1 >
+Login Page - // code here
+</h1>
+</body>
+</html>
+Registration .html
+<html>
+<head>
+<title>Login_Page</title>
+</head>
+<body>
+<h1 >
+Registration Page - // code here
+</h1>
+</body>
+</html>
+
+
+							Lab sheet 7
+
+ 
+ Module 2
+Problem Statement: 
+Write an XSL style sheet for an XML document consisting of details about the 
+shopping cart purchase list with 50gms of Badam, 100gms of Cashew nuts, 150gms of 
+coffee powder, 250gms of salt, 500gms of Dhal, 750 liter of oil and 1000gms of sugar 
+and displays the document about shopping cart information in an HTML table. 
+Online compiler Link:
+https://www.w3schools.com/xml/tryxslt.asp?xmlfile=cdcatalog&xsltfile=cdcatalog 
+Solution 
+Product.xml 
+<?xml version="1.0" encoding="UTF-8"?> 
+<?xml-stylesheet type="text/xsl" href=" Displayproduct.xsl"?> 
+<class> 
+ <product id="101"> 
+ <productname>Badam</productname> 
+ <weight>50 gms</weight> 
+ </product> 
+ <product id="102"> 
+ <productname>Cashew nuts</productname> 
+ <weight>100 gms</weight> 
+ </product> 
+ <product id="103"> 
+ <productname>Coffee Powder</productname> 
+ <weight>150 gms</weight> 
+ </product> 
+ <product id="104"> 
+ <productname>Salt</productname> 
+ <weight>250 gms</weight> 
+ </product> 
+ <product id="105"> 
+ <productname>Dhal</productname> 
+ <weight>500 gms</weight> 
+ </product> 
+ <product id="106"> 
+ <productname>Oil</productname> 
+ <weight>500 liter</weight> 
+ </product> 
+ <product id="107"> 
+ <productname>Sugar</productname> 
+ <weight>1000 gms</weight> 
+ </product> 
+</class> 
+Displayproduct.xsl 
+<?xml version="1.0" encoding="UTF-8"?> 
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> 
+<xsl:template match="/"> 
+<html> 
+<body> 
+<h2>Product List</h2> 
+<table border="1"> 
+<tr bgcolor="#9acd32"> 
+<th>Product ID</th> 
+<th>Product Name</th> 
+<th>Quantity</th> 
+</tr> 
+<xsl:for-each select="class/product"> 
+<tr> 
+<td> <xsl:value-of select="@id"/> </td> 
+<td> <xsl:value-of select="productname"/> </td> 
+<td> <xsl:value-of select="weight"/> </td> 
+</tr> 
+</xsl:for-each> 
+</table> 
+</body> 
+</html> 
+</xsl:template> 
+</xsl:stylesheet> 
+
+
+						Lab sheet 8
+ 
+Module 3
+Problem Statement: 
+Write a PHP script to perform following file handling operation. 
+1. To open a file 
+2. To read a file line by line 
+3. To read a file character by character 
+4. To write a file 
+5. To append a file and close file. 
+Program 
+To open a file 
+<!DOCTYPE html> 
+<html> 
+<body> 
+<?php 
+$myfile=fopen("webdictionary.txt", "r") or die("Unable to open file!"); 
+echo fread($myfile,filesize("webdictionary.txt")); 
+fclose($myfile); 
+?> 
+</body> 
+</html> 
+To read a file line by line 
+<?php 
+$myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!"); 
+while(!feof($myfile)) { 
+ echo fgets($myfile) . "<br>"; 
+} 
+fclose($myfile); 
+?> 
+To read a file character by character
+<?php 
+$myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!"); 
+// Output one character until end-of-file 
+while(!feof($myfile)) { 
+ echo fgetc($myfile); 
+} 
+fclose($myfile); 
+?> 
+To write a file 
+<?php 
+$myfile = fopen("newfile.txt", "w") or die("Unable to open file!"); 
+$txt = "John William\n"; 
+fwrite($myfile, $txt); 
+$txt = "John Smith\n"; 
+fwrite($myfile, $txt); 
+fclose($myfile); 
+?> 
+To append a file and close file. 
+<?php 
+$myfile = fopen("newfile.txt", "a") or die("Unable to open file!"); 
+$txt = "Donald Duck\n"; 
+fwrite($myfile, $txt); 
+$txt = “Harshith\n"; 
+fwrite($myfile, $txt); 
+fclose($myfile); 
+?>
+
+
+							Lab sheet 9
+
+ 
+Module 3
+Problem Statement: 
+Write a PHP MYSQL program to collect the student data and store in Server database. 
+a. Student Name, Roll_no, mail_id, mobile_no, gender, city, state and 
+department - Minimum 4 students records to insert. 
+b. Display the student’s details 
+b. Update the student’s details 
+c. Delete the student Record from database. 
+Step 1: run XAMPP application with MySQL 
+Step 2: create a new php file filename.php and place the php file in C:/xampp / 
+htdocs folder (accommodate required statements to establish connection with 
+your database)
+Registaration.html 
+<!DOCTYPE html>
+<html lang="en-us">
+ <head> <title>Responsive Registaration Form</title></head>
+ 
+ <body>
+ <h1>Student Registaration Form</h1>
+ <form class="srf" action="http://localhost/insertdb.php" method="post">
+ <br><br>Roll No:<input type="text" id="rollno" name="rollno" >
+ <br><br>Student Name:<input type="text" id="name" name="name" >
+ <br><br>Email:<input type="email" id="email" name="email" >
+ <br><br>Mobile:<input type="tel" id="mobile" name="mobile" >
+ <br><br>Gender:<input type="radio" id="male" name="gender" value="male"/>Male 
+ <input type="radio" id="female" name="gender" value="female"/>Female 
+ <br><br>City:<input type="text" id="city" name="city" maxlength="10">
+ <br><br>State:<input type="text" id="state" name="state">
+ <br><br>Specialization:<br><br>
+ <input type="checkbox" name="specialization" value="Computer Science">Computer 
+Science<br/>
+ <input type="checkbox" name="specialization" value="Information 
+Technology">Information Technology<br/>
+ <input type="checkbox" name="specialization" value="Computer 
+Architecture">Computer Architecture<br/>
+ <input type="checkbox" name="specialization" value="Tele Communication">Tele 
+Communication<br/>
+ <br><br><input type="submit" value="Register" onclick="SaveStudentDetails()">
+ </form>
+ </body>
+</html>
+</body>
+</html> 
+insertdb.php 
+<?php
+$servername = "localhost"; 
+$username = "root"; 
+$password = ""; 
+$dbname = "ls9_srf"; // DB Name
+$v1=$_POST["rollno"]; //name attribute value
+$v2=$_POST["name"];//name attribute value
+$v3=$_POST["email"];//name attribute value
+$v4=$_POST["mobile"];//name attribute value
+$v5=$_POST["gender"];//name attribute value
+$v6=$_POST["city"];//name attribute value
+$v7=$_POST["state"];//name attribute value
+$v8=$_POST["specialization"];//name attribute value
+// Create connection
+$conn = mysqli_connect($servername, 
+$username, $password, $dbname); 
+// Check connection
+if (!$conn) 
+{ 
+ die("Connection failed: " . mysqli_connect_error()); 
+} 
+$sql = "INSERT INTO srf VALUES ('$v1', 
+'$v2','$v3','$v4','$v5','$v6','$v7','$v8')"; 
+//srf table name
+if (mysqli_query($conn, $sql)) 
+{ 
+ echo "New record created successfully"; 
+} 
+else 
+{ 
+ echo "Error: " . $sql . "<br>" . mysqli_error($conn); 
+} 
+mysqli_close($conn); 
+?>
+updatedb.php 
+<?php
+$servername = "localhost"; 
+$username = "root"; 
+$password = ""; 
+$dbname = "ls9_srf"; // DB Name
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname); 
+// Check connection
+if (!$conn) { 
+ die("Connection failed: " . mysqli_connect_error()); 
+} 
+$sql = "UPDATE srf SET name='Arulan' WHERE Roll_No='20201CSE0004'"; 
+if (mysqli_query($conn, $sql)) { 
+ echo "Record updated successfully"; 
+} else { 
+ echo "Error updating record: " . mysqli_error($conn); 
+} 
+mysqli_close($conn); 
+?> 
+Deletedb.php 
+<?php
+$servername = "localhost"; 
+$username = "root"; 
+$password = ""; 
+$dbname = "ls9_srf"; // DB Name
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname); 
+// Check connection
+if (!$conn) { 
+ die("Connection failed: " . mysqli_connect_error()); 
+} 
+$sql = "DELETE FROM srf WHERE Roll_No='20201CSE0004'"; 
+if ($conn->query($sql) === TRUE) { 
+ echo "Record deleted successfully"; 
+} else { 
+ echo "Error deleting record: " . $conn->error; 
+} 
+$conn->close(); 
+?>
+ 							Ecommarce
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Website</title>
+	<style>body {
+		font-family: Arial, sans-serif;
+		margin: 0;
+		padding: 0;
+	}
+	
+	header {
+		background-color: #212a5b;
+		color: #fff;
+		padding: 20px;
+	}
+	
+	header h1 {
+		margin: 0;
+	}
+	
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		justify-content: flex-end;
+	}
+	
+	nav li {
+		margin-left: 20px;
+	}
+	
+	nav li:first-child {
+		margin-left: 0;
+	}
+	
+	nav a {
+		color: #fff;
+		text-decoration: none;
+	}
+	
+	main {
+		padding: 20px;
+	}
+	
+	.banner {
+		background-image: url(banner.jpg);
+		background-size: cover;
+		background-position: center;
+		height: 400px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		text-align: center;
+	}
+    .products {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-top: 2rem;
+}
+.products img {
+	width: original;
+}	
+	.banner h2 {
+		font-size: 3rem;
+		margin: 0;
+	}
+	.banner p {
+		font-size: 1.5rem;
+		margin: 20px 0;
+	}
+    footer {
+	background-color: #212a5b;
+	color: white;
+	text-align: center;
+	padding: 3rem;
+    width: original;
+   
+}
+    .button {
+	background-color: #333;
+	color: white;
+	padding: .7rem 1rem;
+	border: none;
+	border-radius: 5px;
+	text-decoration: none;
+	margin-top: 1rem;
+}
+	.button {
+		background-color: rgb(20, 20, 104);
+		color: whitesmoke
+	}
+		</style>
+</head>
+<body>
+	<header>
+		<h1>Shopping Website</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Shop</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="banner">
+			<h2>Welcome to our online store</h2>
+			<p>Shop now and get amazing deals on all products</p>
+			<a href="#" class="button">Shop Now</a>
+		</section>
+		<section class="products">
+			<h2>Featured Products</h2>
+				<article>
+					<img src="item 1.jpg" alt="item 1">
+					<h3>Saree</h3>
+					<p>Border Saree</p>
+					<span class="price">$10.99</span>
+					<a href="#" class="button">Add to Cart</a>
+				</article>
+                <article>
+					<img src="item 2.jpg" alt="item 2">
+					<h3>Saree</h3>
+					<p>Cotton Saree</p>
+					<span class="price">$15.99</span>
+					<a href="#" class="button">Add to Cart</a>
+				</article>
+                <article>
+					<img src="item 3.jpg" alt="item 3">
+					<h3>Saree</h3>
+					<p>Banares Saree</p>
+					<span class="price">$20.99</span>
+					<a href="#" class="button">Add to Cart</a>
+				</article>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright &copy; 2023 Shopping Website</p>
+	</footer>
+</body>
+</html>
+
+							marks 
+<html>
+<body>
+<form method="POST" action="filename.php >
+<h3>Enter student marks</h3>
+<p><input type="number" name="percent"></p>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+<?php
+$marks=$_POST["percent"];
+// Check the marks and assign the grade
+if ($marks >= 60) {
+    $grade = "First Division";
+} else if ($marks >= 45 && $marks < 60) {
+    $grade = "Second Division";
+} else if ($marks >= 33 && $marks < 45) {
+    $grade = "Third Division";
+} else {
+    $grade = "Fail";
+}
+
+// Print the grade
+echo "Ram's grade in Maths exam is $grade";
+
+?>
+
+
+
+
+
+
+
+
+
+
+Search.html
+<!DOCTYPE html>
+<html lang="en-us">
+    <head> <title>Employee Details</title> </head>
+    <body>
+        <h1>Employee Details</h1>
+        <form class="emp" action="http://localhost/dbdisplay.php" method="post">
+        <br><h3>Search Employee Details Based on Employee ID</h3>
+        <br>Enter Employee ID:<input type="number" id="Id" name="Id" >
+        <br><br><input type="submit" value="Search" onclick="SaveEmpDetails()">
+        </form>
+
+        <form class="emp" action="http://localhost/dbdisplay.php" method="post">
+            <br><h3>Search Employee Details Based on Salary</h3>
+            <br>Enter Employee Salary Range:<input type="number" id="SS" name="SS" > 
+            Between
+            <input type="number" id="LS" name="LS" >
+            <br><br><input type="submit" value="Search" onclick="SaveEmpDetails()">
+            </form>
+    </body>
+</html>
+</body>
+</html>
+
+Searchdb.php
+<?php
+$servername = "localhost"; // default
+$username = "root"; // root is a username
+$password = "";     // No password for my db that why it is blank
+$dbname = "Employee"; // mydb is my db name
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysql_connect_error());
+}
+
+// Query Processing 
+if($_POST["Id"]!=0) // search using ID
+{
+$v1=$_POST["Id"];
+$sql = "SELECT * from emp where Id=$v1";
+}
+else  // search using salary
+{
+  $v2=$_POST["SS"]; 
+  $v3=$_POST["LS"]; 
+  $sql = "SELECT * from emp where Salary between $v2 AND $v3";
+}
+
+$result = mysqli_query($conn, $sql); // conn for connection execute query
+
+// Result processing
+if (mysqli_num_rows($result) > 0) 
+{
+  // output data of each row
+  while($row = mysqli_fetch_array($result)) 
+{
+    print "Employee ID: " . $row["Id"]."<br><br>";
+    print "Employee Name: " . $row["Name"]."<br><br>";
+    print "Employee Department: " . $row["Dept"]."<br><br>";
+    print "Employee Salary: " . $row["Salary"]."<br><br>";
+    print "*********************" ."<br><br>";
+  
+  }
+} 
+
+else 
+{
+  echo "0 results";
+}
+
+mysqli_close($conn);// close the database
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+
+function ftc($celsius) {
+    $fahrenheit = (9 * $celsius) / 5 + 32;
+    return $fahrenheit;
+}
+
+// Get the Celsius temperature from the user
+$celsius = floatval(readline("Enter the Celsius temperature: "));
+
+// Convert the Celsius temperature to Fahrenheit
+$fahrenheit = ftc($celsius);
+
+// Print the Fahrenheit temperature
+echo "The Fahrenheit temperature is $fahrenheit";
+
+?>
+
+
