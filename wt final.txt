@@ -1628,3 +1628,55 @@ echo "The Fahrenheit temperature is $fahrenheit";
 ?>
 
 
+
+
+
+
+
+<?php
+$marks = [80, 75, 90, 85, 95, 88, 92, 78, 87, 83];
+
+// Calculate the sum of all marks
+$sum = 0;
+foreach ($marks as $mark) {
+    $sum += $mark;
+}
+
+// Calculate the average
+$count = count($marks);
+$average = $sum / $count;
+
+echo "The average marks scored by the students is: " . $average;
+?>
+
+
+
+
+
+
+
+
+
+
+
+<?php
+$limit = 10; // Set the limit of the Fibonacci series
+
+// Initialize the first two numbers
+$first = 0;
+$second = 1;
+
+// Display the first two numbers
+echo $first . ", " . $second;
+
+// Generate and display the rest of the series
+for ($i = 2; $i < $limit; $i++) {
+    $next = $first + $second;
+    echo ", " . $next;
+
+    $first = $second;
+    $second = $next;
+}
+?>
+
+
