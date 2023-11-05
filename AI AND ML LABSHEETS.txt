@@ -1,0 +1,716 @@
+                                                LABSHEET-1
+#code to print all the keywords present in python
+import keyword 
+print(keyword.kwlist) 
+a=len(keyword.kwlist) 
+print(a)
+
+#single line comment--->shows the single line comment.
+print('hello my dear friends')
+"""
+multi line comment
+how are you all
+have a nice day guys 
+"""
+print('hello CSE people')
+
+
+#exampl1:
+#here 3 variables have been created and stored the values as shown below
+a=50 
+b=50
+c=a+b 
+print(c)
+#example 2 on strings
+x='hello' 
+x
+
+
+#Creating a list with constructor()
+a=([1,2,3,4,5])
+b=([2.4,7.0,6.8])
+c=(['hello','students']) 
+print(a)
+print(b) 
+print(c)
+type(a)
+
+#creating list with heterogenous data:
+a=(['hello',8,9,20.77])
+a
+
+#create list using range function:
+L=list(range(0,6)) 
+print(L)
+#creating a list without constructor():
+days=['monday','tuesday','wednesday','thursday','friday','saturday','sunday'] 
+days
+
+#accesing list items using index values:
+days[1]
+
+#negative indexing:
+#creating a list without constructor():
+days=['monday','tuesday','wednesday','thursday','friday','saturday','sunday'] 
+days[-1]
+
+#list slicing:
+days[1:4]
+
+#list slicing with step size:
+days=['monday','tuesday','wednesday','thursday','friday','saturday','sunday'] 
+days[1:4:2]
+
+List built-in function:
+
+#example1: 
+days=['monday','tuesday','wednesday','thursday','friday','saturday','sunday'] 
+len(days)
+
+numbers=[1,2,3,4,5,6,7,8]
+max(numbers)
+
+numbers=[1,2,3,4,5,6,7,8]
+min(numbers)
+
+numbers=[1,2,3,4,5,6,7,8]
+sum(numbers)
+
+import random 
+numbers=[1,2,3,4,5,6,7,8]
+random.shuffle(numbers) 
+print(numbers)
+
+List Operators:
+
+#examples on operator:
+a=[1,2,3]
+b=[4,5,6]
+c=a+b 
+print(c)
+
+a=[10,20]
+b=3*a 
+print(b)
+
+days=['monday','tuesday','wednesday','thursday','friday','saturday','sunday'] 
+'wednesday' in days
+
+days=['monday','tuesday','wednesday','thursday','friday','saturday','sunday'] 
+'wednesday' not in days
+
+a='Arshiya' 
+b='Arshiya' 
+a is b
+
+a='Arshiya' 
+b='Lubna'
+a is b
+
+days=['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
+del[days[1]] 
+days
+
+
+List Methods:
+
+=['a','b','c','d']
+print(a) 
+a.append('e') 
+print(a)
+
+list=['red','orange','pink','black'] 
+print(list)
+list.clear() 
+print(list)
+
+nums=[1,2,3,4,1,4,1,7,8,1]
+print(nums) 
+nums.count(1)
+
+list_1=[1,2,3,4] 
+print(list_1) 
+list_2=list_1.copy() 
+print(list_2)
+
+A=[1,3,2,4,5]
+B=[5,6,7,3,6]
+print(A) 
+print(B) 
+A.extend(B) 
+print(A)
+
+.PYTHON TUPLES:
+
+#creating tuple with single element:
+a=(5,)
+print(a) 
+print(type(a))
+
+#creating tuple with integers
+a=(1,2,3,4,5)
+print(a)
+
+#creating tuple with float numbers
+b=(6.5,5.9,2.0)
+print(b)
+
+#creating tuple with strings
+c=('one','two','three') 
+c
+
+#creating tuple multiple data types
+mix=('hello',708,66.8,1,2) 
+mix
+
+#accessing items of tuple
+a=(1,2,3,4,'hello')
+print(a[4])
+
+Python Dictionary:
+
+#create a dictionary
+a={
+'name':'joy', 
+'age':23, 
+'education':'Engineer'
+}
+print(a)
+len(a)
+type(a)
+
+x=a.keys() 
+x
+
+y=a.values() 
+y
+
+z=a.items()
+z
+
+Python Sets:
+
+#Example:
+set1={1,2,3,4}
+print(set1)
+
+3duplicates not allowed
+set={1,2,3,4,5,6,7,1,1}
+set
+
+len(set)
+
+type(set)
+
+Python functions:
+
+
+def add(): 
+a=2 
+b=3
+sum=a+b
+return sum 
+add() 
+print(add())
+
+function modularity:
+
+def collectdata():
+'function to collect data'
+statement(s)
+def cleandata():
+'function to clean data'
+statement(s)
+def processdata():
+'function to pre-process the data'
+statement(s)
+def exploredate():
+'function to explore data'
+statement(s)
+def visualization():
+'function to viasualize data'
+statement(s)
+                                               LABSHEET-2
+PYTHON AND NUMPY:
+
+:
+1.20.1
+We have 1D array,2D array and 3D array
+import numpy as np
+print(np.__version__)
+
+#1D array
+import numpy as np
+A1=np.array([1,2,3,4])
+print(A1)
+type(A1)
+A1.shape
+A1.size
+
+
+#2D array
+A2=np.array([[1,2,3,4],[5,6,7,8]])
+print(A2)
+type(A2)
+A2.shape
+A2.size
+A2.ndim
+
+
+#3D array
+A3=np.array([[[1,2,3],[4,5,6],[7,8,9]]])
+print(A3)
+type(A3)
+A3.shape
+A3.size
+A3.ndim
+
+Zeros Array-An array in which all values are 0
+
+import numpy as np
+z1=np.zeros(3)
+z1
+#changing data type
+z1=np.zeros(3,dtype=int)
+z1
+z1.shape
+z1.size
+z1.ndim
+type(z1)
+
+z2=np.zeros((3,4))
+z2
+z2=np.zeros((3,4),dtype=int)
+z2
+type(z2)
+z2.shape
+z2.size
+z2.ndim
+
+
+z3=np.zeros((2,3,4))
+z3
+z3=np.zeros((2,3,4),dtype=int)
+z3
+type(z3)
+z3.ndim
+z3.size
+z3.shape
+
+Ones Array-An array in which all values are 1
+
+
+z3=np.zeros((2,3,4),dtype=int)
+z3
+type(z3)
+z3.ndim
+z3.size
+z3.shape
+A=np.ones(shape,dtype)
+
+#ID ones array
+import numpy as np
+a1=np.ones(3)
+a1
+a1=np.ones(3,dtype=int)
+a1
+type(a1)
+a1.ndim
+a1.shape
+a1.size
+
+
+#2D ones array
+a2=np.ones([3,4])
+a2
+a2=np.ones([3,4],dtype=int)
+a2
+type(a2)
+a2.ndim
+a2.size
+a2.shape
+
+
+#3D ones array
+a3=np.ones([4,2,3])
+a3
+type(a3)
+a3.shape
+a3.size
+
+Full Array:Am array in which all values are same(constant)
+
+#1D full array
+f1=np.full(3,9)
+f1
+f1=np.full(3,9,dtype=float)
+f1
+type(f1)
+f1.shape
+f1.size
+f1.ndim
+
+
+#2D full array
+f2=np.full([2,3],9)
+f2
+
+#3D full array
+f3=np.full([4,2,3],10)
+f3
+
+Numpy Operations:
+
+we can perform following operations on the arrays:
+
+a=np.array([1,2,3])
+b=np.array([1,2,3])
+add=np.add(a,b)
+add
+
+a=np.array([5,10,20])
+b=np.array([4,8,10])
+sub=np.subtract(a,b)
+sub
+
+a=np.array([5,10,20])
+b=np.array([4,8,10])
+sub=np.multiply(a,b)
+sub
+
+a=np.array([5,10,20])
+b=np.array([4,8,10])
+sub=np.divide(a,b)
+sub
+
+a=np.array([5,10,20])
+b=np.array([4,8,10])
+sub=np.mod(a,b)
+sub
+
+a=np.array([5,10,20])
+b=np.array([4,8,10])
+sub=np.power(a,b)
+sub
+
+Installing matplotlib:
+
+!pip install matplotlib
+
+Importing matplotlib:
+
+import matplotlib.pyplot as plt
+
+Line Chart
+yield_Apples=[0.895,0.91,0.919,0.926,0.929,0.931]
+plt.plot(yield_Apples)
+
+BAR PLOT:
+
+import matplotlib.pyplot as plt
+# data to display on plots 
+x = [3, 1, 3, 12, 2, 4, 4] 
+y = [3, 2, 1, 4, 5, 6, 7] 
+# This will plot a simple bar chart
+plt.bar(x, y)
+# Title to the plot
+plt.title("Bar Chart")
+# Adding the legends
+plt.legend(["bar"])
+plt.show()
+
+
+SCATTER PLOT:
+
+import matplotlib.pyplot as plt
+# data to display on plots 
+x = [3, 1, 3, 12, 2, 4, 4]
+y = [3, 2, 1, 4, 5, 6, 7]
+# This will plot a simple scatter chart
+plt.scatter(x, y)
+# Adding legend to the plot
+plt.legend("A")
+plt.xlabel('x')
+plt.ylabel('y')
+# Title to the plot
+plt.title("Scatter chart")
+plt.show()
+
+PIE CHART:
+
+import matplotlib.pyplot as plt
+# data to display on plots 
+x = [1, 2, 3, 4] 
+# this will explode the 1st wedge
+# i.e. will separate the 1st wedge
+# from the chart
+e =(0.1, 0, 0, 0)
+# This will plot a simple pie chart
+plt.pie(x, explode = e)
+# Title to the plot
+plt.title("Pie chart")
+plt.show()
+
+                                            LABSHEET-3
+
+1. Create a Pandas data frame for empdata.csv
+
+import pandas as pd
+df = pd.read_csv("/content/empdata.csv")
+df.head()
+
+Empid Ename Salary DOJ
+0 1001 Ganesh 1000.00 10-10-2000
+1 1002 Anil 23000.50 3/20/2002
+2 1003 Gaurav NaN 03-03-2002
+3 1004 Hema Chandra 16500.50 09-10-2000
+4 1005 Laxmi Prasanna 12000.75 10-08-2000
+
+df.tail(2)
+
+Empid Ename Salary DOJ
+4 1005 Laxmi Prasanna 12000.75 10-08-2000
+5 1006 Anant 9999.99 09-09-1999
+
+df.info()
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 6 entries, 0 to 5
+Data columns (total 4 columns):
+ # Column Non-Null Count Dtype 
+--- ------ -------------- ----- 
+ 0 Empid 6 non-null int64 
+ 1 Ename 6 non-null object 
+ 2 Salary 5 non-null float64
+ 3 DOJ 6 non-null object 
+dtypes: float64(1), int64(1), object(2)
+memory usage: 320.0+ bytes
+
+Empid Salary
+
+count 6.000000 5.000000
+mean 1003.500000 12500.348000
+std 1.870829 8139.622234
+min 1001.000000 1000.000000
+25% 1002.250000 9999.990000
+50% 1003.500000 12000.750000
+75% 1004.750000 16500.500000
+max 1006.000000 23000.500000
+df.shape
+(6, 4)
+type(df)
+pandas.core.frame.DataFrame
+
+2. To retrieve column names
+
+df.columns
+Index(['Empid', 'Ename', 'Salary', 'DOJ'], dtype='object')
+
+4. To retrieve column data
+df.Empid
+0 1001
+1 1002
+2 1003
+3 1004
+4 1005
+5 1006
+Name: Empid, dtype: int64
+
+5. To retrieve a set of columns
+df[['Empid','Ename']]
+Empid Ename
+0 1001 Ganesh
+1 1002 Anil
+2 1003 Gaurav
+3 1004 Hema Chandra
+4 1005 Laxmi Prasanna
+5 1006 Anant
+
+Check for duplicates and remove them
+df1 = df.append(df)
+print('Dimensions of the original frame', df.shape)
+print('Dimensions of the frame with duplicates', df1.shape)
+
+#remove the duplicates
+
+df1 = df1.drop_duplicates() #or use this statement df1.drop_duplicates(inplace = True)
+print('Dimensions of the frame after removing duplicates', df1.shape)
+df1 = df.append(df)
+
+#change all column names to Upper case
+df.columns = [i.upper() for i in df]
+print(df.columns)
+
+Handling missing values
+
+df.isna().sum()
+#df.isnull().sum()
+
+#print(df.isnull())
+print('The no. of nulls in each column is \n',df.isnull().sum())
+df.dropna(axis = 1, inplace = False)
+df.isna().sum()
+
+EMPID ENAME DOJ
+0 1001 Ganesh 10-10-2000
+1 1002 Anil 3/20/2002
+2 1003 Gaurav 03-03-2002
+3 1004 Hema Chandra 09-10-2000
+4 1005 Laxmi Prasanna 10-08-2000
+5 1006 Anant 09-09-1999
+
+EMPID ENAME SALARY DOJ
+0 1001 Ganesh 1000.00 10-10-2000
+1 1002 Anil 23000.50 3/20/2002
+2 1003 Gaurav NaN 03-03-2002
+3 1004 Hema Chandra 16500.50 09-10-2000
+4 1005 Laxmi Prasanna 12000.75 10-08-2000
+5 1006 Anant 9999.99 09-09-1999
+
+6. Find the highest and lowest salary
+
+print('Highest Salary is',df['SALARY'].max())
+print('Lowest Salary is', df['SALARY'].min())
+
+# This is formatted as code
+Display the details of employees whose salary is above 20000
+df[df.SALARY > 20000]
+
+Display only the id and names of employees whose salary is greater than 20000
+df[['EMPID', 'ENAME']] [df.SALARY > 20000]
+
+Display the Eid and name of the highest paid employee
+df[['EMPID','ENAME']] [df.SALARY == df.SALARY.max()]
+
+Display the enames whose salary is above the average salary
+print('Average Salary is', df.SALARY.mean())
+df['ENAME'][df.SALARY > df.SALARY.mean()]
+
+Sort in ascending order of DOJ and store the result in another frame
+df1['DOJ'] = pd.to_datetime(df1['DOJ']) #convert DOJ to date type
+df1.info()
+print('Frame before sorting\n', df1)
+df1.sort_values("DOJ", inplace = True)
+print('Frame after sorting\n', df1)
+
+
+Sort in descending order of dates
+df1.sort_values("DOJ", ascending = False, inplace = True)
+df1
+
+Sort DOJ in descending and salary in ascending order
+df1.sort_values(by = ['DOJ', 'Salary'] , ascending = [False, True], inplace = True)
+df1
+
+                                        LABSHEET-4
+# Import necessary libraries
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Importing the dataset
+df = pd.read_csv('/content/advertising.csv')
+df.head(10)
+df.info()
+print(df.shape)
+
+
+# View descriptive statistics
+
+print(df.describe())
+
+# Outlier Analysis
+fig, axs = plt.subplots(3, figsize = (5,5))
+plt1 = sns.boxplot(df['TV'], ax = axs[0])
+plt2 = sns.boxplot(df['Newspaper'], ax = axs[1])
+plt3 = sns.boxplot(df['Radio'], ax = axs[2])
+plt.tight_layout()
+
+# Declare feature variable and target variable
+
+X = df['TV']
+y = df['Sales']
+
+# Plot scatter plot between X and y
+
+plt.scatter(X, y, color = 'blue', label='Scatter Plot')
+plt.title('Relationship between TV and Sales')
+
+plt.xlabel('TV')
+
+plt.ylabel('Sales')
+
+plt.legend()
+
+plt.show()
+
+# Print the dimensions of X and y
+print(X.shape)
+print(y.shape)
+
+X=np.array(X)
+y=np.array(y)
+
+# Reshape X and y
+
+X = X.reshape(-1,1)
+y = y.reshape(-1,1)
+
+# Print the dimensions of X and y after reshaping
+
+print(X.shape)
+print(y.shape)
+
+
+# Split X and y into training and test data sets
+#random_state--the set of data does not change
+
+from sklearn.model_selection import train_test_split
+X_train,X_test,y_train,y_test = train_test_split(X, y, test_size=0.30, random_state=42)
+
+
+# Print the dimensions of X_train,X_test,y_train,y_test
+print(X_train.shape)
+print(y_train.shape)
+print(X_test.shape)
+print(y_test.shape)
+
+
+# Fit the linear model
+
+# Instantiate the linear regression object lm
+from sklearn.linear_model import LinearRegression
+lm = LinearRegression()
+
+
+# Train the model using training data sets
+lm.fit(X_train,y_train)
+
+
+# Predict on the test data
+y_pred=lm.predict(X_test)
+
+# Visualising the Training set results
+plt.scatter(X_train, y_train, color = 'red')
+plt.plot(X_train, lm.predict(X_train), color = 'blue')
+
+# Visualising the Test set results
+plt.scatter(X_test, y_test, color = 'red')
+plt.plot(X_test, lm.predict(X_test), color = 'blue')
+plt.title('Test set results')
+plt.xlabel('TV')
+plt.ylabel('Sales')
+plt.show()
+
+
+# Compute model slope and intercept
+
+slope = lm.coef_
+intercept = lm.intercept_,
+print("Estimated model slope:" , slope)
+print("Estimated model intercept:" , intercept)
+
+X_new = [[200]]
+
+lm.predict(X_new)
