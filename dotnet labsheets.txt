@@ -1,0 +1,1092 @@
+1. Program to find sum of first n natural numbers using for loop .
+
+
+using System;
+using System.IO;
+namespace Sum
+{
+ internal class forloop
+ {
+ static void Main()
+ {
+ Console.WriteLine("enter nth number");
+ int range = Convert.ToInt32(Console.ReadLine());
+ int sum = 0;
+ for(int i=0;i<=range;i++)
+ {
+ sum = sum + i;
+ }
+ Console.WriteLine("Sum of numbers" + sum);
+ }
+ }
+}
+
+
+2. Program to find sum till nth odd number using while loop.
+
+
+using System;
+using System.IO;
+namespace whileloop
+{
+ internal class sumofoddnumbers
+ {
+ public static void Main()
+ {
+ Console.WriteLine("enter nth number");
+ int range = Convert.ToInt32(Console.ReadLine());
+ int i = 1, sum = 0;
+ while(i<=range)
+ {
+ sum = sum + i;
+ i = i + 2;
+ }
+ Console.WriteLine("sum of odd numbers" + sum);
+ }
+ }
+}
+
+
+3. Program to check whether the given number is palindrome or not
+
+
+using System;
+using System.IO;
+namespace Palindrome
+{
+ internal class Program
+ {
+ static void Main()
+ {
+ int num, rem, sum = 0, temp;
+ Console.WriteLine("To find no.is palindrome or not");
+ Console.WriteLine("enter number");
+ num = Convert.ToInt32(Console.ReadLine());
+ temp = num;
+ while (num > 0)
+ {
+ rem = num % 10;
+ num = num / 10;
+ sum = sum * 10 + rem;
+ }
+ Console.WriteLine("Reverses number is:{0}", sum);
+ if (temp == sum)
+ {
+ Console.WriteLine("number is palindrome");
+ }
+ else
+ {
+ Console.WriteLine("Number is not a palindrome");
+ }
+ }
+ }
+}
+
+
+4. Program to display array of students’ marks compute average and sum of
+students’ marks using for loop.
+
+
+using System;
+using System.IO;
+namespace Array
+{
+ internal class sumofnumbersarray
+ {
+ static void Main()
+ {
+ Console.WriteLine("How many students's marks to store");
+ int a = Convert.ToInt32(Console.ReadLine());
+ int[] arr1 = new int[a];
+ int sum = 0;
+ float average = 0;
+ for (int i = 0; i < arr1.Length; i++)
+ {
+ Console.Write("enter" + i + "number");
+ arr1[i] = Convert.ToInt32(Console.ReadLine());
+ sum = sum + arr1[i];
+ }
+ average = sum / arr1.Length;
+ Console.WriteLine();
+ Console.WriteLine("Displaying an array");
+ foreach (int j in arr1)
+ Console.WriteLine(j);
+ Console.WriteLine("sum is" + sum);
+ Console.WriteLine("average is" + average);
+ }
+ }
+}
+
+
+5. Program to search a number and no. of times it occurred in a given array.
+
+
+using System;
+using System.IO;
+namespace Array
+{
+ internal class arrayduplicate
+ {
+ static void Main()
+ {
+ int[] arr1 = { 1, 3, 4, 5, 3, 7, 18, 1, 18, 1, 18 };
+ Console.WriteLine("enter number to be searched");
+ int searchnumber = Convert.ToInt32(Console.ReadLine());
+ int count = 0;
+ int i;
+ for(i=0;i<arr1.Length;i++)
+ {
+ if (arr1[i] == searchnumber)
+ count++;
+ }
+ if (count > 0)
+ Console.WriteLine("search number occured" + count);
+ else
+ Console.WriteLine("not occured in list");
+ }
+ }
+}
+
+6. Program to sort numbers in a given array and find the highest number.
+
+
+using System;
+using System.IO;
+namespace Array
+{
+ internal class ArraySort
+ {
+ static void Main()
+ {
+ Console.WriteLine("How many numbers to sort");
+ int a = Convert.ToInt32(Console.ReadLine()); //Declared variable a 
+to hold object reference
+ int[] arr1 = new int[a];//new operator creates an object and object 
+reference is assigned to variable
+ int temp;
+ for(int i=0;i<arr1.Length;i++)
+ {
+ Console.Write("enter" + i + "marks");
+ arr1[i] = Convert.ToInt32(Console.ReadLine());
+ }
+ for(int i=0;i<a;i++)
+ {
+ for(int j=i+1;j<a;j++)
+ {
+ if (arr1[i] < arr1[j])
+ {
+ temp = arr1[i];
+ arr1[i] = arr1[j];
+ arr1[j] = temp;
+ }
+ }
+ }
+ Console.WriteLine("Sorted array");
+ foreach(int i in arr1)
+ {
+ Console.WriteLine(i);
+ }
+ Console.WriteLine("Highest number" + arr1[0]);
+ }
+ }
+}
+
+
+
+1. Write a C# code to demonstrate the delegate 
+namespace ConsoleApp8
+{
+ public delegate void SimpleDelegate();
+ class del1
+ {
+ public void display()
+ {
+ Console.WriteLine("Hi");
+ }
+ static void Main(string[] 
+args) 
+ {
+ del1 obj1 = new del1();
+ SimpleDelegate obj2 = new SimpleDelegate(obj1.display);
+ obj2();
+ Console.ReadKey();
+ }
+ }
+}
+
+2.Write a code to show the concept of delegate 
+namespace ConsoleApp8
+{
+ delegate int Calculate(int n1, int n2);
+ class Program
+ {
+ public static int Multiply(int i, int j)
+ {
+ return (i * j);
+ }
+ public static int add(int i, int j)
+ {
+ return (i + j);
+ }
+ static void Main(string[] args)
+ {
+ int a = 90;
+ int b = 78;
+ Calculate obj1 = Program.add;
+ Console.WriteLine("result is" + obj1(a, b));
+ Calculate obj2 = new Calculate(Program.Multiply);
+ Console.WriteLine("result of Multiplication is" + obj2(a, b));
+ Console.ReadKey();
+ }
+ }
+}
+
+2. Write a code to handle the event in c#.
+namespace ConsoleApp8
+{
+ delegate void MyEventHandler();
+ class MyEvent
+ {
+ public event MyEventHandler SomeEvent;
+ public void OnSomeEvent()
+ {
+ if (SomeEvent != null)
+ SomeEvent();
+ }
+ }
+ class Program11
+ {
+ static void handler()
+ {
+ Console.WriteLine("Event occured");
+ }
+ static void Main(string[] args)
+ {
+ MyEvent evt = new MyEvent();
+ evt.SomeEvent += new MyEventHandler(Program11.handler);
+ evt.OnSomeEvent();
+ 
+}
+ 
+}
+}
+
+1. Developer is writing code for dividing two numbers. If the user enters 0 in the second 
+number, an exception should be raised. Handle the exception with the appropriate code. 
+
+
+namespace Exceptionprogram1
+{ 
+internal class Program
+{ 
+static void Main(string[] args) 
+{ 
+ int a, b;
+Console.WriteLine("Enter first number"); 
+ a= Convert.ToInt32(Console.ReadLine()); 
+ Console.WriteLine("Enter second number"); 
+ b= Convert.ToInt32(Console.ReadLine()); 
+ try 
+ { 
+ int c = a/b; 
+ Console.WriteLine("Answer is " + c); 
+ } 
+ catch(Exception e) 
+ { 
+ Console.WriteLine("Second Number cannot be zero"); 
+ } 
+ 
+ Console.ReadKey(); 
+ } 
+ 
+ } 
+} 
+
+2. Student stores the data in an Array. Discuss the code to handle Array outofbounds exception. 
+
+
+namespace Exceptionprogram2
+{ 
+ internal class Class1 
+ { 
+ static void Main() 
+ { 
+ int[] numbers = { 0, 1, 23 }; 
+ try 
+ { 
+ Console.WriteLine(numbers[3]); 
+ 
+ } 
+ catch(Exception e) 
+ { 
+ Console.WriteLine(e); 
+ } 
+ finally 
+ { 
+ Console.WriteLine(" finally block executes always whether exceptionis raised or not"); 
+ } 
+ Console.ReadKey(); 
+ } 
+ } 
+} 
+
+3. Admin executive of the university is entering the university name for the students. If he 
+enters the name wrongly, exception should be raised. 
+
+
+namespace Exceptionprogram3
+{ 
+ internal class Collegename 
+ { 
+ static void Main() 
+ { 
+ string s; 
+ Console.WriteLine("Enter your university name"); 
+ try 
+ { 
+ s = Console.ReadLine(); 
+ if (s.ToUpper()=="PRESIDENCY") 
+ { 
+ Console.WriteLine("Welcome"); 
+ } 
+ else 
+ { 
+ throw new Exception("You have entered wrong input"); 
+ } 
+ } 
+ catch (Exception e) 
+ { 
+ Console.WriteLine(e.Message); 
+ } 
+ Console.ReadKey(); 
+ } 
+ } 
+}
+
+
+
+1. Write a C# code to demonstrate the delegate 
+namespace ConsoleApp8
+{
+ public delegate void SimpleDelegate();
+ class del1
+ {
+ public void display()
+ {
+ Console.WriteLine("Hi");
+ }
+ static void Main(string[] 
+args) 
+ {
+ del1 obj1 = new del1();
+ SimpleDelegate obj2 = new SimpleDelegate(obj1.display);
+ obj2();
+ Console.ReadKey();
+ }
+ }
+}
+
+2.Write a code to show the concept of delegate 
+namespace ConsoleApp8
+{
+ delegate int Calculate(int n1, int n2);
+ class Program
+ {
+ public static int Multiply(int i, int j)
+ {
+ return (i * j);
+ }
+ public static int add(int i, int j)
+ {
+ return (i + j);
+ }
+ static void Main(string[] args)
+ {
+ int a = 90;
+ int b = 78;
+ Calculate obj1 = Program.add;
+ Console.WriteLine("result is" + obj1(a, b));
+ Calculate obj2 = new Calculate(Program.Multiply);
+ Console.WriteLine("result of Multiplication is" + obj2(a, b));
+ Console.ReadKey();
+ }
+ }
+}
+
+2. Write a code to handle the event in c#.
+namespace ConsoleApp8
+{
+ delegate void MyEventHandler();
+ class MyEvent
+ {
+ public event MyEventHandler SomeEvent;
+ public void OnSomeEvent()
+ {
+ if (SomeEvent != null)
+ SomeEvent();
+ }
+ }
+ class Program11
+ {
+ static void handler()
+ {
+ Console.WriteLine("Event occured");
+ }
+ static void Main(string[] args)
+ {
+ MyEvent evt = new MyEvent();
+ evt.SomeEvent += new MyEventHandler(Program11.handler);
+ evt.OnSomeEvent();
+ 
+}
+ 
+}
+}
+
+
+1.using System;
+using System.IO;
+namespace PartialClass
+{
+    public partial class Orders
+    {
+        private int x;
+        private int y;
+        public Orders(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+
+    }
+    public partial class Orders
+    {
+        public void PrintOrders()
+        {
+            Console.WriteLine("Orders:{0},{1}", x, y);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Orders ord = new Orders(20, 60);
+            ord.PrintOrders();
+            Console.ReadLine();
+        }
+    }
+}
+
+2. using System;
+using System.IO;
+namespace AnonymousType
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var Language = new { Name = "C#", Version = 4 };
+            Console.WriteLine("Language Details");
+            Console.WriteLine("Name" + Language.Name);
+            Console.WriteLine("Version" + Language.Version);
+            Console.ReadLine();
+        }
+    }
+}
+
+3. using System;
+namespace SealedClass
+{
+    sealed class Animal
+    {
+
+    }
+
+    // trying to inherit sealed class
+    // Error Code
+    class Dog : Animal
+    {
+
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // create an object of Dog class
+            Dog d1 = new Dog();
+            Console.ReadLine();
+        }
+    }
+}
+
+1. //Read and print array elements
+
+using System;  
+public class ArrayElements 
+{  
+    public static void Main()  
+{  
+    int[] arr = new int[5]; 
+    int i;  
+       Console.Write("\n\nRead and Print elements of an array:\n");
+       Console.Write("-----------------------------------------\n");	
+  
+    Console.Write("Input 5 elements in the array :\n");  
+    for(i=0; i<5; i++)  
+    {  
+	    Console.Write("element - {0} : ",i);
+	    arr[i] = Convert.ToInt32(Console.ReadLine());  		
+    }  
+    Console.Write("\nElements in array are: ");  
+    for(i=0; i<5; i++)  
+    {  
+        Console.Write("{0}  ", arr[i]);  
+    } 
+    Console.Write("\n");	
+  }
+}
+
+2.//Program to read an array and print its elements in reverse order
+using System;  
+public class ArrayElements  
+{  
+    public static void Main() 
+{
+   int i,n;
+   int[] a= new int[100];
+   
+       Console.Write("\n\nRead n number of values in an array and display it in reverse order:\n");
+       Console.Write("------------------------------------------------------------------------\n");
+   
+   Console.Write("Input the number of elements to store in the array :");
+   n = Convert.ToInt32(Console.ReadLine());    
+   
+   
+   Console.Write("Input {0} number of elements in the array :\n",n);
+   for(i=0;i<n;i++)
+      {
+	  Console.Write("element - {0} : ",i);
+	  a[i] = Convert.ToInt32(Console.ReadLine()); 
+	  }
+      
+   Console.Write("\nThe values store into the array are : \n");
+   for(i=0;i<n;i++)
+     {
+	   Console.Write("{0}  ",a[i]);
+	 }
+ 
+   Console.Write("\n\nThe values store into the array in reverse are :\n");
+   for(i=n-1;i>=0;i--)
+      {
+	   Console.Write("{0} ",a[i]);
+	  }
+   Console.Write("\n\n");
+  } 
+} 
+
+3. Read and display and array of strings
+class ArraySample
+{
+    string[] s;
+    void ReadString()
+    {
+        s=new string[3];
+        Console.WriteLine("enter strings");
+        for(int i=0;i<3;i++)
+        s[i]=Console.ReadLine();
+    }
+    void PrintArray()
+    {
+        Console.WriteLine("Given strings");
+        foreach(string i in s)
+        Console.WriteLine(i+",");
+    }
+    public static void Main()
+    {
+        ArraySample obj=new ArraySample();
+        obj.ReadString();
+        obj.PrintArray();
+    }
+}
+
+4.An Institute is planning to start a course on B.Sc. Computer Science. It has planned to include subjects C Programming, Discrete Mathematics, Information Security, Environmental Science and English. After including subjects name for the given course, should be able to read the subjects name using array of strings.
+
+using System;
+class ArraySample
+{
+    string[] s;
+    void ReadString()
+    {
+        s=new string[5];
+        Console.WriteLine("enter name of subjects for B.Sc. Computer Science 1st year");
+        for(int i=0;i<5;i++)
+        s[i]=Console.ReadLine();
+    }
+    void PrintArray()
+    {
+        Console.WriteLine("First year subjects in B.Sc. Computer Science");
+        foreach(string i in s)
+        Console.WriteLine(i+",");
+    }
+    public static void Main()
+    {
+        ArraySample obj=new ArraySample();
+        obj.ReadString();
+        obj.PrintArray();
+    }
+}
+
+5.//Program to illustrate polymorphism
+//A construction company decided to construct plots. Rate of plots depends on LIG, MIG and HIG. Write a program to display prices per square feet based on LIG,MIG and HIG by illustrating polymorphism
+
+
+using System;
+class HouseAllot
+{
+    public virtual void squareFeet()
+    {
+        Console.WriteLine("Sqaure feet depends upon LIG, MIG,HIG");
+    }
+}
+class LIG:HouseAllot
+{
+    public override void squareFeet()
+    {
+        Console.WriteLine("LIG:Square feet is 3 cent");
+    }
+}
+class MIG:HouseAllot
+{
+    public override void squareFeet()
+    {
+        Console.WriteLine("MIG: Square feet is 5 cent");
+    }
+}
+class HIG: HouseAllot
+{
+    public override void squareFeet()
+    {
+        Console.WriteLine("HIG:Square feet is 8 cent");
+    }
+}
+class MainClass
+{
+    public static void Main()
+    {
+        HouseAllot h=new HouseAllot();
+        LIG l=new LIG();
+        MIG m=new MIG();
+        HIG g=new HIG();
+        HouseAllot h1=l;
+        HouseAllot h2=m;
+        HouseAllot h3=g;
+        h.squareFeet();
+        l.squareFeet();
+        m.squareFeet();
+        g.squareFeet();
+        h1.squareFeet();
+        h2.squareFeet();
+        h3.squareFeet();
+        
+        
+    }
+}
+
+1.using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp19
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int[] numbers = { 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95 };
+            var myNums =
+                from n in numbers
+                where n > 25
+                select n;
+            foreach(var x in myNums)
+            {
+                listView1.Items.Add(x.ToString());
+            }
+        }
+    }
+}
+
+2.using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp20
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double[] doubles = { 500, 700, 100, 200, 400, 600, 900, 300, 800 };
+            listView1.Items.Clear();
+            var sorting=from d in doubles
+                select d;
+            foreach(var d in sorting)
+            {
+                listView1.Items.Add(d.ToString());
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double[] doubles = { 500, 700, 100, 200, 400, 600, 900, 300, 800 };
+            listView1.Items.Clear();
+            var DescendingSorting = from d in doubles
+                                    orderby d descending
+                                    select d;
+            foreach(var d in DescendingSorting)
+            {
+                listView1.Items.Add(d.ToString());
+            }
+
+        }
+    }
+}
+
+3.using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
+
+namespace WindowsFormsApp21
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string[] text = new string[] { "Hello everybody", "This is an", "Example of using", "select clause", "with linq" };
+            IEnumerable<string[]> words = text.Select(w => w.Split());
+            foreach (string[] segment in words)
+                foreach (string word in segment) listView1.Items.Add(word);
+        }
+    }
+}
+
+4. using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp22
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        public class Customer
+        {
+            public int key;
+            public string Name;
+        }
+        public class Order
+        {
+            public int key;
+            public string OrderNumber;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var customers = new List<Customer>()
+            {
+                new Customer {key=1,Name="Pooja"},
+                new Customer {key=2,Name="Nisha"},
+                new Customer{key=3, Name="Madhu"}
+            };
+            var orders = new List<Order>()
+            {
+                new Order{key=1,OrderNumber="First" },
+                new Order{key=2,OrderNumber="Second"},
+                new Order{key=3,OrderNumber="Third"}
+             };
+            var q=from c in customers
+                  join o in orders on c.key equals o.key
+                select new { c.Name, o.OrderNumber };
+            foreach(var i in q)
+            {
+                listView1.Items.Add(i.OrderNumber.ToString() + "" + i.Name);
+               
+            }
+
+        }
+    }
+}
+
+5. using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp23
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string[] words = { "apple", "banana", "pineapple", "apricot", "papaya", "blueberry" };
+            var Groupwords = from w in words
+                             group w by w[0] into g
+                             select new { FirstLetter = g.Key, words = g };
+            foreach(var g in Groupwords)
+            {
+                listView1.Items.Add("Words that starts from letter:" + g.FirstLetter.ToString());
+                foreach(var w in g.words)
+                {
+                    listView1.Items.Add(w);
+                }
+            }
+        }
+    }
+}
+
+
+Lab Sheet4
+Problem Statement : MVC design pattern with database
+AIM:
+To implement a web application based on the MVC design pattern with data base. 
+ALGORITHM
+
+Step 1 :  create a database named "employee" in MySQL. Let's create an employee1 table using below DDL script:
+CREATE TABLE employee1 (id int,first_name varchar(20),last_name varchar(20),username varchar(250),password varchar(20) ,address varchar(45),contact varchar(45));
+
+Step 2: Create the Employee class which will act as our Model class.
+Step 3: EmployeeDao class that contains JDBC code to connect with the MySQL database. 
+Step 4: create an EmployeeServlet class to process HTTP request parameters and redirect to the appropriate JSP page after request data stored in the database:
+Step 5: design an employee registration HTML form employeeregister.jsp
+Step 6: After an employee successfully registered then employeedetails.jsp show a successful message on screen
+.
+ PROGRAM:
+Employee.java
+package com.pu;
+
+import java.io.Serializable;
+
+
+public class Employee implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	private int id;
+	private String firstName;
+     private String lastName;
+     private String username;
+     private String password;
+     private String address;
+     private String contact;
+    
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public String getUsername() {
+        return username;
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    public String getContact() {
+        return contact;
+    }
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+}
+
+EmployeeDao.java
+package com.pu;
+import java.sql.*;
+
+public class EmployeeDao {
+	public int registerEmployee(Employee employee) throws Exception {
+        String query = "INSERT INTO employee1" +
+            "  (id, first_name, last_name, username, password, address, contact) VALUES " +
+            " (?, ?, ?, ?, ?,?,?);";
+
+        int result = 0;
+
+        Class.forName("com.mysql.jdbc.Driver");
+
+        try (Connection connection = DriverManager
+            .getConnection("jdbc:mysql://localhost:3306/god?characterEncoding=latin1","root","admin123");
+
+            // Step 2:Create a statement using connection object
+PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+preparedStatement.setInt(1, employee.getId());
+preparedStatement.setString(2, employee.getFirstName());
+preparedStatement.setString(3, employee.getLastName());
+preparedStatement.setString(4, employee.getUsername());
+preparedStatement.setString(5, employee.getPassword());
+preparedStatement.setString(6, employee.getAddress());
+preparedStatement.setString(7, employee.getContact());
+
+            System.out.println(preparedStatement);
+            // Step 3: Execute the query or update query
+            result = preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            // process sql exception
+            System.err.println(e);
+        }
+        return result;
+    }
+
+    
+}
+
+employeeregister.jsp
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Employee Register Form</h1>
+        <form action="employeedetail.jsp" method="post">
+            <table style="with: 50%">
+            <tr>
+                <td>Registration Id</td>
+                    <td><input type="text" name="id" /></td>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" name="firstName" /></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" name="lastName" /></td>
+                </tr>
+                <tr>
+                    <td>UserName</td>
+                    <td><input type="text" name="username" /></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" /></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><input type="text" name="address" /></td>
+                </tr>
+                <tr>
+                    <td>Contact No</td>
+                    <td><input type="text" name="contact" /></td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit" /></form>
+</body>
+</html>
+employeedetail.jsp
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@page import="com.pu.*"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<jsp:useBean id="employee" class="com.pu.Employee" />
+
+ <jsp:setProperty property="*" name="employee" />
+
+ <%
+  EmployeeDao employeeDao = new EmployeeDao();
+  int status = employeeDao.registerEmployee(employee);
+  if (status > 0) {
+   out.print("You are successfully registered");
+  }
+ %>
+</body>
+</html>
+
+RESULT:
+     Thus ,to implement a simple MVC web application using JSP and Servlet.
+
+
